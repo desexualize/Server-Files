@@ -1,0 +1,18 @@
+{
+    "name": "JamesUKVRP",
+    "version": "1.0.0",
+    "description": "",
+    "main": "bot.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "JamesUK-6793",
+    "license": "MIT",
+    "dependencies": {
+        "ascii-table": "^0.0.9",
+        "discord-webhook-node": "^1.1.8",
+        "discord.js": "^11.6.4",
+        "dotenv": "^6.2.0",
+        "yarn": "^1.22.17"
+    }
+}
