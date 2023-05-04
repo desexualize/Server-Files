@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "stratum2_bdbold";
+    src: url("stratum2-bold-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.killContainer {
+    width: auto !important;
+    height: 18px;
+    float: right;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.50);
+    color: #FFF;
+    font-family: 'stratum2_bdbold', monospace;
+    line-height: -10px;
+    font-size: 100% !important;
+    padding-bottom: 15px;
+    padding-top: -150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    vertical-align: top;
+    transition: padding-top 1s;
+}
+
+.selfkillcontainer {
+    width: auto !important;
+    height: 20px;
+    float: right;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.50);
+    color: #FFF;
+    font-family: 'stratum2_bdbold', monospace;
+    line-height: 18px;
+    font-size: 100% !important;
+    padding-bottom: 5px;
+    padding-top: -150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    vertical-align: top;
+    border: 2px solid rgb(240, 47, 47);
+    transition: padding-top 1s;
+}   
+
+
+.weapon {
+    height: 14px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.killer {
+    color: rgb(240, 47, 47);
+}
+
+.killed {
+    color: rgb(240, 47, 47);
+}
+
+.clear {
+    clear:both
+}

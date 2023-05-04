@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.crosshair {
+    opacity: 0;
+}
+
+.crosshair {
+    text-align: center;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index: 200; 
+}
+
+.crosshair.fadeIn {
+    width: 8px;
+    height: 8px;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    z-index: 200;
+    opacity: 1; 
+}
+
+.crosshair.active {
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    background: #FFFFFF url("assets/close.png") no-repeat 4px 4px;
+    background-size: 45%; 
+}

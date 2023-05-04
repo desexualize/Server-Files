@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    user-select: none;
+}
+
+#MainInventoryContainer {
+    width: 76em;
+    height: 40em;
+    background: #191919c9;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: solid 0.1em #ffffff;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;1,100;1,200&display=swap');
+#PersonalInventorySpaceContainer {
+    background-color: #101010e6;
+    position: relative;
+    top: 4em;
+    left: 3em;
+    border-radius: 6px;
+    width: 27em;
+    height: 30em;
+}
+
+#SecondInventorySpaceContainer {
+    background-color: #101010e6;
+    position: relative;
+    left: 45.3em;
+    height: 30em;
+    bottom: 25.9em;
+    border-radius: 6px;
+    width: 27em;
+}
+
+#SecondInventoryLine {
+    background: #ffffff;
+    width: 100%;
+    height: 0.2em;
+    bottom: 22em;
+    position: relative;
+}
+
+@font-face {
+    font-family: inventoryFont;
+    src: url(./assets/pricedown.otf);
+}
+
+#ButtonRow1 {
+    width: 15.3em;
+    height: auto;
+    position: relative;
+    bottom: 52em;
+    left: 32em;
+    float: left;
+}
+
+#ButtonRow1>div {
+    width: 10em;
+    height: 3em;
+    float: left;
+    margin-left: 0.8em;
+    margin-bottom: 0.6em;
+    background-color: #101010e6;
+    border: solid 0.1em #ffffff;
+    text-align: center;
+    justify-content: center;
+}
+
+.InvText{
+    font-family: 'inventoryFont', sans-serif;
+    position: relative;
+    font-size: 25px;
+    top: 3%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#ButtonRow1>div:hover {
+    background-color: #ffffff34;
+}
+
+#ButtonRow1>div>span {
+    color: white;
+    font-family: 'inventoryFont', sans-serif;
+    position: relative;
+    font-size: 1.8em;
+    top: 0.2em;
+}
+
+
+#InventoryLine {
+    width: 91%;
+    background: #ffffff;
+    height: 0.09em;
+    position: relative;
+    left: 3em;
+    top: 2em;
+}
+
+#InventoryText {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    position: relative;
+    font-size: 0.8em;
+    bottom: 32em;
+    left: 24.5em;
+}
+
+#SecondInventoryWeight {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#PersonalInventoryWeight {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: inline-table;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-header-group;
+}
+
+td {
+    padding: 0em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    justify-content: center;
+    font-size: 0.8em;
+    border: none;
+}
+
+th {
+    text-align: center;
+}
+
+th {
+    padding: 0.4em;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#HeaderTable {
+    height: 1em;
+    color: white;
+    font-size: 0.8em;
+}
+
+.ItemTable>td {
+    padding-top: 0.4em;
+}
+
+.ItemSecondTable>td {
+    padding-top: 0.5em;
+}
+
+.ItemSelected {
+    border: none;
+    background-color: #ffffff2a;
+}
+
+#ndInventoryText {
+    position: fixed;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    opacity: 0.6;
+    top: 18em;
+    left: 41.8em;
+    width: 52em;
+}
