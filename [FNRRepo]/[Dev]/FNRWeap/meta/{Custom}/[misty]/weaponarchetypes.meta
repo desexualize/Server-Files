@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+		  <modelName>w_ar_sa80</modelName>
+		  <txdName>w_ar_sa80</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sa80_mag2</modelName>
+		  <txdName>w_ar_sa80_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="100"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noodp">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>FNR Community</title>
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:300,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+
+<body>
+  <audio id="loading" src="assets/music/music.mp3" autoplay="true" hidden="true" loop="true"></audio>
+  <div id="main">
+    <div id="page-loader">
+      <div class="spinner-container">
+        <div class="css-spinner">
+        </div>
+      </div>
+    </div>
+    <section id="hero" class="hero hero-1">
+      <div class="video-background">
+        <iframe width="2880" height="1620"
+          src="https://cdn.discordapp.com/attachments/932235449290878976/1059908960439779408/video.mp4"
+          frameborder="0"> </iframe>
+      </div>
+      <div class="front-content page-enter-animated">
+        <div class="container-mid"> <img class="logo" src="assets/images/logo.png" alt="logo" width="30%">
+          <div class="cycle-wrapper">
+            <div id="cycle">
+              <div class="slide">
+                <h3>Welcome to</h3>
+                <h1>FNR Community<a class="color-main">  </a></h1>
+              </div>
+              <div class="slide">
+                <h3><a class="color-main"></a></h3>
+                <h1></h1>
+              </div>
+
+            </div>
+          </div>
+          <p>SCROLL DOWN</p>
+        </div>
+      </div>
+      <div class="background-content page-enter-animated">
+        <div class="level-1">
+          <div class="bg-overlay"></div>
+          <div class="bg-pattern"></div>
+          <div id="canvas">
+            <canvas class="bg-effect layer" data-depth="0.2"></canvas>
+          </div>
+        </div>
+        <div class="level-2">
+          <div class="bg-image layer" data-depth="0.04"></div>
+          <div class="bg-video layer" data-depth="0.04"></div>
+          <div class="bg-color layer" data-depth="0.04"></div>
+        </div>
+      </div>
+    </section>
+    <div id="overlay">
+      <section class="overlay">
+        <div class="content">
+          <div class="container-mid">
+            <div class="container">
+              <h1><u>RULES</u></h1>
+              <h4>
+                <div align="left">01. No Intention to Roleplay
+              </h4>
+              <h6>
+                <div align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp Any activity that demonstrates zero intention to come into the server and roleplay is not allowed. 
+                  Players are expected to be in character at all times while in the server unless speaking to staff. 
+                  Initiation is expected by both players to be considered a roleplay scenario.
+              </h6>
+              <br>
+              <h4>
+                <div align="left">02. FTVL/Fear RP
+              </h4>
+              <h6>
+                <div align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp You must value your life and health at ALL times during roleplay and to the best of your ability, value your car, property and possessions. 
+                  There is no variance of this rule regarding style/character within roleplay.
+              </h6>
+              <br>
+              <h4>
+                <div align="left">03. No RDM
+              </h4>
+              <h6>
+                <div align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp Random Death Match is when you attack/kill someone without RP reason whatsoever and it is not allowed in this server.
+              </h6>
+              <br>
+              <h4>
+                <div align="left">04. No VDM
+              </h4>
+              <h6>
+                <div align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp Vehicle Death Match is when you intentionally use a vehicle to attack/kill another player, without very serious RP reason, and is not allowed in this server.
+              </h6>
+              <br>
+              <h4>
+                <div align="left">05. RP Interruption
+              </h4>
+              <h6>
+                <div align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp Any deliberate behaviour that forces yourself into another player’s roleplay situation to interfere, disturb or troll, without solid roleplay reason will not be tolerated by staff.
+              </h6>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script>
+    var play = false;
+    var vid = document.getElementById("loading");
+    vid.volume = 0.1;
+    window.addEventListener('keyup', function (e) {
+      if (e.which == 69) {
+        vid.volume = Math.min(vid.volume + 0.1, 1);
+      } else if (e.which == 65) {
+        vid.volume = Math.max(vid.volume - 0.1, 0);
+      };
+    });
+
+    var audio = document.querySelector('audio');
+
+    if (audio) {
+
+      window.addEventListener('keydown', function (event) {
+
+        var key = event.which || event.keyCode;
+
+        if (key === 32) { // spacebar
+
+          event.preventDefault();
+
+          audio.paused ? audio.play() : audio.pause();
+
+        }
+
+      });
+    }
+  </script>
+</body>
+
+</html>

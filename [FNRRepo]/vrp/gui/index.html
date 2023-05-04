@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="Menu.js" type="text/javascript"></script>
+    <script src="ProgressBar.js" type="text/javascript"></script>
+    <script src="WPrompt.js" type="text/javascript"></script>
+    <script src="RequestManager.js" type="text/javascript"></script>
+    <script src="AnnounceManager.js" type="text/javascript"></script>
+    <script src="Div.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <link href="design.css" rel="stylesheet" type="text/css" />
+    <style>
+        body, html {
+            background-color: #61616100;
+            overflow:auto;
+        }
+        .grid-box{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 200px;
+            margin-bottom: 200px;
+            margin-left: 400px;
+            width: 1000px;
+        } 
+        .cell{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0px 2px rgb(0 0 0 / 7%), 0 5px 6px rgb(0, 0, 0);
+            height: 200px;
+            outline: 5px solid rgba(189, 189, 189, 0.223);
+            background-color: #616161;
+            background-size: cover;
+        }
+        .text{
+            text-align: center;
+            font-family: 'Akrobat-Bold', sans-serif;
+            align-items: center;
+            color: #f5f5f5;
+            /* text-shadow: 4px 2px 0px #000000; */
+            font-size: 30px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .cell:hover {
+            opacity: 0.8;
+        }
+        .cell:first-child {
+            border-bottom: 1px solid rgb(0, 0, 0);
+            border-right: 1px solid rgb(0, 0, 0);
+        }
+        .cell:nth-child(2) {
+            border-bottom: 1px solid rgb(0, 0, 0);
+        }
+        .cell:nth-child(3) {
+            border-right: 1px solid rgb(0, 0, 0);
+        }
+    </style></head>
+
+<body>
+   
+    <div>
+         <!-- <img id = "Deathscreen" src="img/death.png" width="1920px" height="1080"> -->
+    </div>
+    <!-- Start Kill Feed -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rsuite/4.8.9/rsuite.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="killfeed/style.css">
+
+    <div id="killfeed"></div>
+    <script src="killfeed/index.js"></script>
+    <script src="progress/rprogress.js"></script>
+    <!-- End Kill Feed-->
+</body>
+
+<body id="displayProperty" style="display:false;">
+    <div class=""></div>
+    <div class="container">	
+        <div class="row">
+            <div class="col-12 mt-5 text-center" style="color: rgb(255, 255, 255);">
+                <h1></h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="grid-box">
+                    <div id="Daily" class="cell" style="background-image: url(https://media.discordapp.net/attachments/967504833319927829/1086369487432990780/beach_3.jpg?width=1117&height=629)">
+                        <h1 class="text">Daily Kit</h1>
+                    </div>
+                    <div id="Weekly" class="cell" style="background-image: url(https://media.discordapp.net/attachments/967504833319927829/1086369488984866856/beach_1.jpg?width=1117&height=629)">
+                        <h1 class="text">Weekly Kit</h1>
+                    </div>
+                    <div id="Discord" class="cell" style="background-image: url(https://media.discordapp.net/attachments/967504833319927829/1086369489186213958/beach_2.jpg?width=1117&height=629)">
+                        <h1 class="text">Discord Kit</h1>
+                    </div>
+                    <div id="Booster" class="cell" style="background-image: url(https://media.discordapp.net/attachments/967504833319927829/1086369488443818064/beach3.png?width=972&height=629)">
+                        <h1 class="text">Booster Kit</h1>
+                    </div>
+                    <div id="Subscription" class="cell" style="background-image: url(https://media.discordapp.net/attachments/967504833319927829/1086369487684632597/beach1.png?width=1126&height=629)">
+                        <h1 class="text">Subscription Kit</h1>
+                    </div>
+                    <div id="Bonus" class="cell" style="background-image: url(https://media.discordapp.net/attachments/967504833319927829/1086369488066334760/beach2.png?width=984&height=629)">
+                        <h1 class="text">Bonus Kit</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        function display(bool) {
+            if (bool) {
+                $("#displayProperty").show();
+            } 
+            else {
+                $("#displayProperty").hide();
+            }
+        }
+        display(false)
+
+        window.addEventListener('message', function(event) {
+            var item = event.data;
+            if (item.type === "ui") {
+                if (item.status == true) {
+                    display(true);
+                } else {
+                    display(false)
+                }
+            }
+        })
+
+        $("#Daily").click(function () {
+            $.post(`https://${GetParentResourceName()}/Submit:Kit`, JSON.stringify({kitname: "daily"}));
+            return
+        })
+        $("#Weekly").click(function () {
+            $.post(`https://${GetParentResourceName()}/Submit:Kit`, JSON.stringify({kitname: "weekly"}));
+            return
+        })
+        $("#Discord").click(function () {
+            $.post(`https://${GetParentResourceName()}/Submit:Kit`, JSON.stringify({kitname: "discord"}));
+            return
+        })
+        $("#Booster").click(function () {
+            $.post(`https://${GetParentResourceName()}/Submit:Kit`, JSON.stringify({kitname: "booster"}));
+            return
+        })
+        $("#Subscription").click(function () {
+            $.post(`https://${GetParentResourceName()}/Submit:Kit`, JSON.stringify({kitname: "subscription"}));
+            return
+        })
+        $("#Bonus").click(function () {
+            $.post(`https://${GetParentResourceName()}/Submit:Kit`, JSON.stringify({kitname: "bonus"}));
+            return
+        })
+    })
+</script>
+
+</html>

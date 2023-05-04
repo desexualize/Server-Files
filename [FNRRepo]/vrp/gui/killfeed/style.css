@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: 'stratum2_bdbold';
+    src: url('font/stratum2-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Main div: */
+div.killfeed {
+    position: absolute;
+    right: 1.3em;
+    top: 1.3em;
+    width: auto !important;
+    /* background: red; */
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    display: flex;
+    padding-top: 40px; /*40px*/
+    transition: padding-top 1s;
+}
+/* Empty main container: */
+div.killfeed:empty {
+    padding-top: 0px;
+}
+/* Div inside the main container: (each individual kill) */
+div.killfeed div.killFeedKill {
+    width: auto !important;
+    display: inline;
+    /* margin-right:auto; */
+    margin-left: auto;
+    padding: 3px 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    /* border: 2px solid #800000; */
+    line-height: 18px;
+    transition: margin-top 1s;
+    padding: 5px;
+    padding: 3px 6px 3px 6px;
+    margin-bottom: 5px;
+}
+div.killfeed div.self {
+    border: 2px solid #fc3838;
+}
+div.killfeed div:first-child {
+    margin-top: -38px;
+}
+/* Paragraph containing spans */
+div.killfeed div p.kill{
+    font-family: 'stratum2_bdbold', 'Roboto', sans-serif;
+    display: inline;
+    color: white;
+    margin: 0;
+    text-align: right;
+    float: right;
+    font-size: 120% !important;
+    /* padding: 3px 0 0 !important; */
+}
+div.killfeed div img {
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 4px 0 4px;
+}
+div.killfeed div span.none {
+    color: #fc3838;
+}
+div.killfeed div span.police {
+    color: #4F9EDE;
+}
+div.killfeed div span.nhs {
+    color: #00D100;
+}
+
+div.killfeed div span.range {
+    font-size: 0.89em;
+    padding-left: 0.3em;
+    vertical-align: center;
+}
+div.killfeed div img.suicide {
+    vertical-align: middle !important;
+    padding-bottom: 2px;
+}
