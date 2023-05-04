@@ -1,0 +1,12 @@
+local Tunnel = module("vrp", "lib/Tunnel")
+local Proxy = module("vrp", "lib/Proxy")
+local vRP = Proxy.getInterface("vRP")
+local vRPclient = Tunnel.getInterface("vRP", "vRP_currency")
+
+RegisterServerEvent("Nova:Server:UpdateFinancial")
+AddEventHandler("Nova:Server:UpdateFinancial", function()
+    local user_id = vRP.getUserId({source})
+    local cash = vRP.getMoney({user_id})
+    local bank = vRP.getBankMoney({user_id})
+    TriggerClientEvent("Nova:Client:UpdateFinancial", source, cash, bank)
+end)

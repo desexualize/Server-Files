@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+body {
+    font-family: 'Montserrat', sans serif;
+    font-style: normal !important;
+    background: none !important;
+}
+
+/* JAKEexe is king*/
+p2{
+  font-size: 15px;
+}
+
+.newtext{
+  padding-top:10px;
+}
+
+.logo{
+  position: absolute;
+  top:-25%;
+}
+
+/* Frol's changes end here
+  Note: misc changes are made throughout the css and html*/
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+#background img {
+  transition: opacity 3s ease-in;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#background img + img {
+  opacity: 0;
+}
+
+.jumbotron {
+    margin: 0 !important;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    color: #fff !important;
+    padding: 0 !important;
+    text-shadow: #000 1px 0 10px;
+}
+
+.navbar {
+    padding: 0 !important;
+    margin-left: 5px;
+}
+
+.container {
+    max-width: 1300px !important;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-top: -390px;
+    margin-left: -650px;
+    padding-bottom: 20px;
+}
+
+.nav-item {
+    width: 200px;
+    background: black;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /*border-color: #fff;
+    border-style: solid;
+    border-width: 1px;*/
+}
+
+.nav-item a {
+    color: #fff !important;
+    font-weight: normal;
+}
+
+.nav-link.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0px !important;
+}
+
+.nav-link {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: .5rem 1rem;
+}
+
+a.nav-link.active {
+    color:white !important;
+}
+
+.tab-content {
+    /*height: 650px;*/
+    color: #fff;
+    font-style: normal !important;
+}
+
+.inner-tabs {
+    width: 100px;
+    margin-left: 5px;
+    float: left;
+    width: 410px;
+    display: flex;
+    font-style: normal !important;
+
+  }
+
+
+.nav-link-inner {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    height: 40px;
+    margin-bottom: 10px;
+    /*font-weight: bold;*/
+    border-radius: 0px !important;
+}
+
+a.nav-link-inner {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link-inner.active {
+    background: #fff;
+    color: #000;
+}
+
+.tab-content-inner {
+    width: 840px;
+    height: 705px;
+    float: left;
+    background: rgba(0, 0, 0, 0.7);
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.tab-content-inner p {
+    height: 30px;
+    padding-top: 1px;
+}
+
+kbd {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-family: Oswald;
+}
+
+code {
+    color: #fff;
+    font-family: Oswald;
+    background: #3c3c3c;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.home-tab {
+    /*background: rgba(0, 0, 0, 0.7);*/
+    margin-left: 5px;
+    height: 650px;
+    background-image: url(../img/home.png);
+    position: relative;
+}
+
+
+.home-tab h1 {
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 40px;
+    font-family: 'Montserrat', sans serif;
+    font-weight: 800 !important; 
+    text-transform: uppercase;
+}
+
+.home-tab h2 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 17px;
+}
+
+.home-tab p {
+    padding: 20px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans serif;
+}
+
+.home-tab ul {
+    height: 470px;
+    list-style: none;
+}
+
+.discord {
+  position: absolute;
+  bottom:150px;
+  left:35px;
+  width: 270px;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+}
+
+.discord img {
+  width: 200px;
+  /*position: absolute;
+  bottom:60px;
+  left:-25px;
+  margin-top: 0px;*/
+}
+
+.discord p {
+  position:absolute;
+  /*bottom:30px;*/
+  left:7px;
+  color: #7289DA;
+  font-weight: bold;
+  text-shadow: #000 1px 0 10px;
+  padding: 0;
+}
+
+.loading {
+    margin: auto;
+    border: #000;
+    border-width: 1px;
+    width: 1265px;
+    position: fixed;
+    top: 55%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cursor {
+    width: 19px;
+    height: 17px;
+    position: fixed;
+    z-index: 10000;
+    overflow:visible;
+    pointer-events:none;
+    background:none !important;
+}
+
+.lds-loader {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-loader div {
+    border: #000;
+    border-style: solid;
+    border-width: .5px;
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: #fff;
+    animation: lds-loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-loader div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  .lds-loader div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  .lds-loader div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes lds-loader {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }

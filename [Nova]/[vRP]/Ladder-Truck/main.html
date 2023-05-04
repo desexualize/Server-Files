@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+	<style>
+@font-face {
+    font-family: "DSEG14";
+    src: url("controls/DSEG14.woff") format("woff");
+}
+
+#basket-controls {
+	background: #dfdfdf;
+	border: 3px solid black;
+	bottom: 0;
+	display: none;
+	height: 130px;
+	position: fixed;
+	right: 0;
+	width: 650px;
+
+	font-family: 'Lato', Arial;
+	font-size: 1em;
+	font-weight: bold;
+}
+.basketval {
+	font-family: 'DSEG14', monospace;
+	font-size: 1.7em;
+	font-weight: normal;
+}
+.light {
+	background-color: #cfcfcf;
+	border: 2px solid #494949;
+	border-radius: 50%;
+	box-shadow: #00000033 0 -1px 1px 1px, inset #3a3a3a 0 -1px 5px;
+	display: inline-block;
+	height: 10px;
+	position: fixed;
+	width: 10px;
+}
+.light.light_green {
+	background-color: #00ee00 !important;
+	box-shadow: #00000033 0 -1px 8px 1px, inset #0f2c0f 0 -1px 4px, #00ff0080 0 0 0, 0 0 15px 8px #06ca109f;
+}
+.light.light_red {
+	background-color: #ff0000 !important;
+	box-shadow: #00000033 0 -1px 8px 1px, inset #220404 0 -1px 4px, #ff000080 0 0 0, 0 0 15px 8px #da0202c9;
+}
+#rot_light {
+	bottom: 90px;
+	right: 395px;
+}
+#mp_light {
+	bottom: 90px;
+	right: 160px;
+}
+#ext_light {
+	bottom: 28px;
+	right: 395px;
+}
+#sp_light {
+	bottom: 28px;
+	right: 160px;
+}
+#ready_light {
+	bottom: 97px;
+	right: 27px;
+}
+#basketlock_light {
+	bottom: 62px;
+	right: 27px;
+}
+#spotlight_light {
+	bottom: 26px;
+	right: 27px;
+}
+
+#seat-controls {
+	background: #f0f0f0;
+	border: 3px solid black;
+	bottom: 0;
+	display: none;
+	height: 375px;
+	position: fixed;
+	right: 0;
+	width: 700px;
+
+	font-family: 'VT323', monospace;
+	font-size: 1.5em;
+}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+	<script>
+function setBasketValue(id, value) {
+	value = value.toFixed(1);
+	document.getElementById(id).innerHTML = "!".repeat(5 - value.length) + value;
+}
+	
+function updateSVG(mp, ext, sp, clearance=-1) {
+	var len = (ext + 9) * 6;
+	var A = [len * Math.cos(mp), len * Math.sin(mp)];
+	var B = [16.6 * Math.cos(mp + sp), 16.6 * Math.sin(mp + sp)];
+	
+	var path = `M 270 210 l ${-A[0]} ${-A[1]} l ${-B[0]} ${-B[1]} m 0 -12 l 0 15 l -10 0 l 0 -15`;
+	document.getElementById("ladderline").setAttribute("d", path);
+	
+	if (clearance == -1) {
+		document.getElementById("grounddot").setAttribute("cx", 280);
+		document.getElementById("grounddot").setAttribute("cy", 210);
+	} else {
+		document.getElementById("grounddot").setAttribute("cx", 265 - A[0] - B[0]);
+		document.getElementById("grounddot").setAttribute("cy", 215 - A[1] - B[1] + clearance * 6);
+	}
+}
+function setSeatIcon(index,state,colour,opacity=0.1) {
+	if(state) {
+		document.getElementsByClassName("iconback")[index].setAttribute("style", `fill: ${colour};`);
+		document.getElementsByClassName("iconimg")[index].setAttribute("style", "opacity: 0.9;");
+	} else {
+		document.getElementsByClassName("iconback")[index].setAttribute("style", `fill: ${colour};`);
+		document.getElementsByClassName("iconimg")[index].setAttribute("style", `opacity: ${opacity};`);
+	}
+}
+
+var displayType = null;
+
+var lockerSound = new Howl({
+	src: ["sounds/lockers.ogg"],
+	volume: 0,
+	sprite: {
+		open: [0, 2100],
+		close: [2412, 4013]
+	}
+});
+var flapSound = null;
+
+window.addEventListener("message", (event) => {
+	if (event.data.type == "ui") {
+		if (event.data.data == "basket1" || event.data.data == "basket2" || event.data.data == "basket3") {
+			document.getElementById("basket-controls").style.display = "block";
+			document.getElementById("seat-controls").style.display = "none";
+			displayType = "basket";
+		} else if (event.data.data == "seat") {
+			document.getElementById("seat-controls").style.display = "block";
+			document.getElementById("basket-controls").style.display = "none";
+			displayType = "seat";
+		} else {
+			document.getElementById("seat-controls").style.display = "none";
+			document.getElementById("basket-controls").style.display = "none";
+			displayType = null;
+		}
+
+	} else if (event.data.type == "update") {
+		var TLentry = event.data.data;
+
+		if (displayType == "seat") {
+			updateSVG(TLentry["vals"]["mp"], TLentry["vals"]["ext"], TLentry["vals"]["sp"], TLentry["clearance"]);
+
+			// Reach
+			if (TLentry["vals"]["sp"] > -0.01) {
+				var lentot = TLentry["vals"]["ext"] + 9;
+				var lenver = lentot * Math.sin(TLentry["vals"]["mp"]);
+				var lenhor = lentot * Math.cos(TLentry["vals"]["mp"]);
+			} else {
+				var l0 = TLentry["vals"]["ext"] + 6;
+				var l1 = 3;
+
+				var lentot = Math.sqrt(l0 ** 2 + l1 ** 2 + 2 * l0 * l1 * Math.cos(TLentry["vals"]["sp"]));
+				var lenver = l0 * Math.sin(TLentry["vals"]["mp"]) + l1 * Math.sin(TLentry["vals"]["mp"] + TLentry["vals"]["sp"]);
+				var lenhor = l0 * Math.cos(TLentry["vals"]["mp"]) + l1 * Math.cos(TLentry["vals"]["mp"] + TLentry["vals"]["sp"]);
+			}
+			document.getElementById("lenver").innerHTML = `${lenver.toFixed(1)}m`;
+			document.getElementById("lenhor").innerHTML = `${lenhor.toFixed(1)}m`;
+			document.getElementById("lentot").innerHTML = `${lentot.toFixed(1)}m`;
+
+			// Spotlight
+			var state = "OFF";
+			TLentry["spotlight"] ? state = "ON" : state = "OFF";
+			document.getElementById("lighton").innerHTML = state;			
+			document.getElementById("lightrot").innerHTML = `${(TLentry["vals"]["lightRot"] * 180 / Math.PI).toFixed(1)}&deg;`;
+			document.getElementById("lightpitch").innerHTML = `${(TLentry["vals"]["lightPitch"] * 180 / Math.PI).toFixed(1)}&deg;`;
+
+			// Text display
+			if (TLentry["positions"]["pitchb"] != -90) {
+				document.getElementById("texthead").innerHTML = `PLEASE WAIT. STABILISERS DEPLOYING`;
+
+				document.getElementById("textrot").innerHTML = ``;
+				document.getElementById("textmp").innerHTML = ``;
+				document.getElementById("textext").innerHTML = ``;
+				document.getElementById("textsp").innerHTML = ``;
+			} else {
+				if (TLentry["controllingTL"]) {
+					document.getElementById("texthead").innerHTML = `READY FOR OPERATION - CONTROLLING`;
+				} else if (TLentry["operator"]) {
+					document.getElementById("texthead").innerHTML = `BASKET CONTROLS IN USE`;
+				} else {
+					document.getElementById("texthead").innerHTML = `READY FOR OPERATION`;
+				}
+
+				document.getElementById("textrot").innerHTML = `ROT: ${(TLentry["vals"]["rot"] * 180 / Math.PI).toFixed(1)}&deg;`;
+				document.getElementById("textmp").innerHTML = `MP: ${(TLentry["vals"]["mp"] * 180 / Math.PI).toFixed(1)}&deg;`;
+				document.getElementById("textext").innerHTML = `EXT: ${(TLentry["vals"]["ext"]).toFixed(2)}m (${(TLentry["vals"]["ext"] + 9).toFixed(2)}m)`;
+				document.getElementById("textsp").innerHTML = `SP: ${(TLentry["vals"]["sp"] * 180 / Math.PI).toFixed(1)}&deg; (${((TLentry["vals"]["mp"] + TLentry["vals"]["sp"]) * 180 / Math.PI).toFixed(1)}&deg;)`;
+			}
+
+			// Occupants
+			var occupants = TLentry["occupants"];
+			delete occupants["seat"];
+			var numOccupants = 0;
+			Object.values(occupants).forEach((val) => {
+				if (val) { numOccupants++ };
+			})
+			var width = 42 + 94 * numOccupants;
+			document.getElementById("occubar").setAttribute("width", width);
+
+			// Indicator lights
+			TLentry["ready"] ? setSeatIcon(1, true, "#08aa30") : setSeatIcon(1, false, "#444444");
+			TLentry["basketLock"] ? setSeatIcon(2, true, "#fd0a0a") : setSeatIcon(2, false, "#08aa30", 0.9);
+			(TLentry["clearance"] < 0.25 && TLentry["clearance"] != -1) ? setSeatIcon(3, true, "#08aa30") : setSeatIcon(3, false, "#444444");
+			
+			(TLentry["vals"]["rot"] < 2.042 || TLentry["vals"]["rot"] > 3.770) ? setSeatIcon(4, false, "#444444") : setSeatIcon(4, true, "#fd0a0a");
+			(TLentry["vals"]["mp"] < 1.300 && TLentry["vals"]["mp"] > -0.255) ? setSeatIcon(5, false, "#444444") : setSeatIcon(5, true, "#fd0a0a");
+			TLentry["vals"]["ext"] < 22.8 ? setSeatIcon(6, false, "#444444") : setSeatIcon(6, true, "#fd0a0a");
+			
+			var sp_min = Math.max(...[-0.8727-TLentry["vals"]["mp"], -1.5708]);
+			TLentry["vals"]["sp"] < sp_min + 0.01 ? setSeatIcon(7, true, "#fd0a0a") : setSeatIcon(7, false, "#444444");
+
+		} else if (displayType == "basket") {
+			setBasketValue("basketrot", TLentry["vals"]["rot"] * 180 / Math.PI);
+			setBasketValue("basketmp", TLentry["vals"]["mp"] * 180 / Math.PI);
+			setBasketValue("basketext", TLentry["vals"]["ext"] + 9);
+			setBasketValue("basketsp", TLentry["vals"]["sp"] * 180 / Math.PI);
+
+			(TLentry["vals"]["rot"] < 2.042 || TLentry["vals"]["rot"] > 3.770) ? document.getElementById("rot_light").classList.remove("light_red") : document.getElementById("rot_light").classList.add("light_red");
+			(TLentry["vals"]["mp"] < 1.308 && TLentry["vals"]["mp"] > -0.261) ? document.getElementById("mp_light").classList.remove("light_red") : document.getElementById("mp_light").classList.add("light_red");
+			TLentry["vals"]["ext"] < 22.9 ? document.getElementById("ext_light").classList.remove("light_red") : document.getElementById("ext_light").classList.add("light_red");
+			
+			var sp_min = Math.max(...[-0.8727-TLentry["vals"]["mp"], -1.5708]);
+			TLentry["vals"]["sp"] > sp_min + 0.01 ? document.getElementById("sp_light").classList.remove("light_red") : document.getElementById("sp_light").classList.add("light_red");
+
+			TLentry["positions"]["pitchb"] != -90 ? document.getElementById("ready_light").classList.remove("light_green") : document.getElementById("ready_light").classList.add("light_green");
+			TLentry["basketLock"] ? document.getElementById("basketlock_light").classList.add("light_red") : document.getElementById("basketlock_light").classList.remove("light_red");
+			TLentry["spotlight"] ? document.getElementById("spotlight_light").classList.add("light_green") : document.getElementById("spotlight_light").classList.remove("light_green");
+		}
+	} else if (event.data.type == "sound") {
+		// # All script sounds
+		var info = event.data.data;
+
+		if (info.type == "lockers") {
+			if (info.open) {
+				lockerSound.play("open");
+			} else {
+				lockerSound.play("close");
+			}
+			lockerSound.volume(info.vol);
+
+		} else if (info.type == "rearflaps") {
+			// if (info.open) {
+			// 	flapSound.play("open");
+			// } else {
+			// 	flapSound.play("close");
+			// }
+			// flapSound.volume(info.vol);
+
+		}
+	}
+})
+	</script>
+</head>
+<body>
+	<div id="basket-controls">
+		<svg style="height: 100%; width: 100%; z-index: 10;">
+			<!-- Rot -->
+			<text x="100" y="42" style="fill: #000000; text-anchor: end">Rotation: </text>
+			<rect x="110" y="12" width="110" height="45" rx="5" style="fill: #8f8f8f; stroke: #000000; stroke-width: 1;"></rect>
+			<text x="121" y="48" style="fill: #999999;" class="basketval">~~~.~</text>
+			<text x="121" y="48" style="fill: #303030;" class="basketval" id="basketrot">!!! !</text>
+			<text x="227" y="38" style="fill: #000000; text-anchor: start">&deg;</text>
+			
+			<!-- Mp -->
+			<text x="335" y="42" style="fill: #000000; text-anchor: end">Pitch: </text>
+			<rect x="345" y="12" width="110" height="45" rx="5" style="fill: #8f8f8f; stroke: #000000; stroke-width: 1;"></rect>
+			<text x="356" y="48" style="fill: #999999;" class="basketval">~~~.~</text>
+			<text x="356" y="48" style="fill: #303030;" class="basketval" id="basketmp">!!! !</text>
+			<text x="462" y="38" style="fill: #000000; text-anchor: start">&deg;</text>
+			
+			<!-- Ext -->
+			<text x="100" y="103" style="fill: #000000; text-anchor: end">Length: </text>
+			<rect x="110" y="73" width="110" height="45" rx="5" style="fill: #8f8f8f; stroke: #000000; stroke-width: 1;"></rect>
+			<text x="121" y="109" style="fill: #999999;" class="basketval">~~~.~</text>
+			<text x="121" y="109" style="fill: #303030;" class="basketval" id="basketext">!!! !</text>
+			<text x="227" y="98" style="fill: #000000; text-anchor: start">&deg;</text>
+			
+			<!-- Sp -->
+			<text x="335" y="103" style="fill: #000000; text-anchor: end">Tilt: </text>
+			<rect x="345" y="73" width="110" height="45" rx="5" style="fill: #8f8f8f; stroke: #000000; stroke-width: 1;"></rect>
+			<text x="356" y="109" style="fill: #999999;" class="basketval">~~~.~</text>
+			<text x="356" y="109" style="fill: #303030;" class="basketval" id="basketsp">!!! !</text>
+			<text x="462" y="98" style="fill: #000000; text-anchor: start">&deg;</text>
+
+			<!-- Indicator lights -->
+			<text x="605" y="35" style="fill: #000000; text-anchor: end">Ready: </text>
+			<text x="605" y="70" style="fill: #000000; text-anchor: end">Basket Lock: </text>
+			<text x="605" y="105" style="fill: #000000; text-anchor: end">Spotlight: </text>
+		</svg>
+		
+		<div class="light" id="rot_light"></div>
+		<div class="light" id="mp_light"></div>
+		<div class="light" id="ext_light"></div>
+		<div class="light" id="sp_light"></div>
+
+		<div class="light" id="ready_light"></div>
+		<div class="light light_green" id="basketlock_light"></div>
+		<div class="light" id="spotlight_light"></div>
+	</div>
+	<div id="seat-controls">
+		<svg style="height: 100%; width: 100%;">
+			<!-- TL Diagram -->
+			<path d="M 270 210 l -194.709 78.667 a 210 210 0 0 1 143.905 -282.429 L 270 210" style="fill: grey; stroke: none;"></path>
+			<path d="M 270 210 l -202.844 54.352 a 210 210 0 0 1 152.041 -258.114 L 270 210" style="fill: #02ee3d; stroke: none;"></path>
+			<path d="M 270 210 l -210 0" style="stroke-dasharray: 15,10; stroke: #ffffff; stroke-width: 2; fill: none; opacity: 0.5"></path>
+			<path id="ladderline" d="M 270 210 l -54 0 l -16.6 0 m 0 -12 l 0 15 l -10 0 l 0 -15" style="fill: none; stroke-width: 3; stroke: #ffffff;"></path>
+			<circle id="grounddot" cx="280" cy="210" r="2" style="fill: #ff0000; stroke: none;"></circle>
+			<path d="M 270 210 l -194.709 78.667 a 210 210 0 0 1 143.905 -282.429 L 270 210" style="fill: none; stroke-width: 2; stroke: #000000;"></path>
+			<circle cx="270" cy="210" r="3" style="fill: #000000; stroke: none;"></circle>
+
+			<!-- Lengths -->
+			<rect x="352" y="4" width="169" height="69" style="fill:#444444; stroke: none;"></rect>
+			<rect x="356" y="8" width="161" height="61" style="fill: none; stroke-width: 2; stroke: #f0f0f0;"></rect>
+			<rect x="360" y="12" width="55" height="24" style="fill: #f0f0f0; stroke: none;"></rect>
+			<text x="363" y="31" style="fill: #444444;">REACH</text>
+
+			<image x="435" y="10" href="controls/arrow.png" height="17" transform="rotate(-90 444 19)"></image>
+			<image x="434" y="30" href="controls/arrow.png" height="17" transform="rotate(180 443 39)"></image>
+			<image x="434" y="49" href="controls/arrow.png" height="18" transform="rotate(-135 443 58)"></image>
+
+			<text x="510" y="25" style="fill: #f0f0f0; text-anchor: end" id="lenver">0.0m</text>
+			<text x="510" y="45" style="fill: #f0f0f0; text-anchor: end" id="lenhor">0.0m</text>
+			<text x="510" y="65" style="fill: #f0f0f0; text-anchor: end" id="lentot">0.0m</text>
+
+			<!-- Spotlight -->
+			<rect x="527" y="4" width="169" height="69" style="fill:#444444; stroke: none;"></rect>
+			<rect x="531" y="8" width="161" height="61" style="fill: none; stroke-width: 2; stroke: #f0f0f0;"></rect>
+			<rect x="535" y="12" width="63" height="41" style="fill: #f0f0f0; stroke: none;"></rect>
+			<text x="538" y="31" style="fill: #444444;">
+				<tspan>LIGHT:</tspan>
+				<tspan x="538" dy="0.75em" id="lighton">OFF</tspan>
+			</text>
+			
+			<image x="610" y="28" href="controls/arrow.png" height="17" transform="rotate(-90 619 37)"></image>
+			<image x="610" y="49" href="controls/arrow.png" height="17" transform="rotate(0 622 58)"></image>
+
+			<text x="685" y="45" style="fill: #f0f0f0; text-anchor: end" id="lightpitch">0.0&deg;</text>
+			<text x="685" y="65" style="fill: #f0f0f0; text-anchor: end" id="lightrot">0.0&deg;</text>
+
+			<!-- Text display -->
+			<rect x="352" y="77" width="344" height="146" style="fill: #10028b; stroke: none;"></rect>
+			<text x=358 y="98" style="fill: #f0f0f0;">
+				<tspan x="358" id="texthead">ERROR</tspan>
+				<tspan x="358" dy="1.6em" id="textrot"></tspan>
+				<tspan x="358" dy="0.8em" id="textmp"></tspan>
+				<tspan x="358" dy="0.8em" id="textext"></tspan>
+				<tspan x="358" dy="0.8em" id="textsp"></tspan>
+			</text>
+
+			<!-- Occupants -->
+			<rect x="352" y="227" width="344" height="71" style="fill: #808080; stroke: none;"></rect>
+			<rect x="358" y="235" width="332" height="25" style="fill: none; stroke-width: 2; stroke: #f0f0f0;"></rect>
+			<rect x="362" y="239" width="42" height="17" style="fill: #02ee3d; stroke: none;" id="occubar"></rect>
+
+			<image x="382" y="266" href="controls/three-more.png" height="27"></image>
+			<image x="466" y="266" href="controls/two-more.png" height="27"></image>
+			<image x="552" y="266" href="controls/one-more.png" height="27"></image>
+			<image x="630" y="266" href="controls/no-more.png" height="27"></image>
+
+			<!-- Icons -->
+			<rect x="4" y="302" width="81.5" height="69" style="fill:#08aa30; stroke: none;" class="iconback"></rect>
+			<image x="10.25" y="302" href="controls/battery.png" height="69" style="opacity: 0.9;" class="iconimg"></image>
+
+			<rect x="89.5" y="302" width="83.5" height="69" style="fill:#444444; stroke: none;" class="iconback"></rect>
+			<image x="95.75" y="302" href="controls/basket-down.png" height="69" style="opacity: 0.1;" class="iconimg"></image>
+			
+			<rect x="177" y="302" width="83.5" height="69" style="fill:#fd0a0a; stroke: none;" class="iconback"></rect>
+			<image x="183.25" y="302" href="controls/basket-lock.png" height="69" style="opacity: 0.9;" class="iconimg"></image>
+
+			<rect x="264.5" y="302" width="83.5" height="69" style="fill:#444444; stroke: none;" class="iconback"></rect>
+			<image x="270.75" y="302" href="controls/on-ground.png" height="69" style="opacity: 0.1;" class="iconimg"></image>
+			
+			<rect x="352" y="302" width="83.5" height="69" style="fill:#444444; stroke: none;" class="iconback"></rect>
+			<image x="358.25" y="302" href="controls/rot-limit.png" height="69" style="opacity: 0.1;" class="iconimg"></image>
+			
+			<rect x="439.5" y="302" width="83.5" height="69" style="fill:#444444; stroke: none;" class="iconback"></rect>
+			<image x="445.75" y="302" href="controls/mp-limit.png" height="69" style="opacity: 0.1;" class="iconimg"></image>
+			
+			<rect x="527" y="302" width="83.5" height="69" style="fill:#444444; stroke: none;" class="iconback"></rect>
+			<image x="533.25" y="302" href="controls/ext-limit.png" height="69" style="opacity: 0.1;" class="iconimg"></image>
+
+			<rect x="614.5" y="302" width="81.5" height="69" style="fill:#444444; stroke: none;" class="iconback"></rect>
+			<image x="620.75" y="302" href="controls/sp-limit.png" height="69" style="opacity: 0.1;" class="iconimg"></image>
+		</svg>
+	</div>
+</body>
+</html>

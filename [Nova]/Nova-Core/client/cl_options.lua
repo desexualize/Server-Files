@@ -1,0 +1,119 @@
+-- local statusr = "~r~[Off]"
+-- local hitsounds = false
+-- 
+-- local statusc = "~r~[Off]"
+-- local compass = false
+-- 
+-- local statusT = "~r~[Off]"
+-- local toggle = false
+-- 
+-- local df = {
+--     {"10%", 0.1},
+--     {"20%", 0.2},
+--     {"30%", 0.3},
+--     {"40%", 0.4},
+--     {"50%", 0.5},
+--     {"60%", 0.6},
+--     {"70%", 0.7},
+--     {"80%", 0.8},
+--     {"90%", 0.9},
+--     {"100%", 1.0},
+--     {"150%", 1.5},
+--     {"200%", 2.0},
+--     {"250%", 2.5},
+--     {"300%", 3.0},
+--     {"350%", 3.5},
+--     {"400%", 4.0},
+--     {"450%", 4.5},
+--     {"500%", 5.0},
+--     {"600%", 6.0},
+--     {"700%", 7.0},
+--     {"800%", 8.0},
+--     {"900%", 9.0},
+--     {"1000%", 10.0},
+-- }
+-- 
+-- local d = {"10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%", "150%", "200%", "250%", "300%", "350%", "400%", "450%", "500%", "600%", "700%", "800%", "900%", "1000%"}
+-- local dts = 9
+-- 
+-- RMenu.Add('OptionsMenu', 'main', RageUI.CreateMenu("", "Options Menu", 1300, 50, "options", "options"))
+-- 
+-- RageUI.CreateWhile(1.0, RMenu:Get('OptionsMenu', 'main'), nil, function()
+-- 
+--     RageUI.IsVisible(RMenu:Get('OptionsMenu', 'main'), true, false, true, function()
+-- 
+--         RageUI.Button("Toggle Rust Hit Sounds " .. statusr, nil, {RightLabel = ""}, true, function(Hovered, Active, Selected)
+--             if Selected then
+--                 if not hitsounds then 
+--                     statusr = "~g~[On]"
+--                     ExecuteCommand("hs")
+--                     hitsounds = true
+--                 else 
+--                     ExecuteCommand("hs")
+--                     statusr = "~r~[Off]"
+--                     hitsounds = false
+--                 end
+--             end
+--         end)
+-- 
+--         RageUI.Button("Toggle Compass " .. statusc, nil, {RightLabel = ""}, true, function(Hovered, Active, Selected)
+--             if Selected then
+--                 if not compass then 
+--                     statusc = "~g~[On]"
+--                     ExecuteCommand("compass")
+--                     compass = true
+--                 else 
+--                     ExecuteCommand("compass")
+--                     statusc = "~r~[Off]"
+--                     compass = false
+--                 end
+--             end
+--         end)
+-- 
+--         
+--         RageUI.Button("Toggle Auto Equip " .. statusT, 'When Purchasing a gun, Toggle wether it Equipes or not.', {RightLabel = ""}, true, function(Hovered, Active, Selected)
+--             if Selected then
+--                 if not toggle then 
+--                     statusT = "~g~[On]"
+--                     isToggleT(true)
+--                
+--                     toggle = true
+--                 else 
+--                     isToggleT(false)
+--                     statusT = "~r~[Off]"
+--                     toggle = false
+--                 end
+--             end
+--         end)
+-- 
+--         RageUI.List("Modify Render Distance", d, dts, nil, {}, true, function(a,b,c,d)
+--             if c then
+-- 
+--             end
+-- 
+--             dts = d
+--         end)
+-- 
+--     end, function()
+--        
+--     end)
+-- end)
+-- 
+-- 
+-- Citizen.CreateThread(function() 
+--     while true do
+--         Citizen.InvokeNative(0xA76359FC80B2438E, df[dts][2])
+--                 if IsControlJustPressed(0, 168) then 
+--                    
+--                     RageUI.Visible(RMenu:Get("OptionsMenu", "main"), true)
+--       
+--                 end
+--            
+--                 
+--         Citizen.Wait(0)
+--     end
+-- end)
+
+
+
+

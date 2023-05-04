@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+		  <modelName>w_ar_m4a1</modelName>
+		  <txdName>w_ar_m4a1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_thompson</modelName>
+		  <txdName>w_sb_thompson</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_thompson_mag1</modelName>
+		  <txdName>w_sb_thompson_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_goldenacr</modelName>
+		  <txdName>w_ar_goldenacr</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_goldenacr_mag1</modelName>
+		  <txdName>w_ar_goldenacr_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_warhead</modelName>
+		  <txdName>w_ar_warhead</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_warhead_mag1</modelName>
+		  <txdName>w_ar_warhead_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_dtmdr</modelName>
+		  <txdName>w_ar_dtmdr</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_dtmdr_mag1</modelName>
+		  <txdName>w_ar_dtmdr_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_516sopmod</modelName>
+		  <txdName>w_ar_516sopmod</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_516sopmod_mag1</modelName>
+		  <txdName>w_ar_516sopmod_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sg553</modelName>
+		  <txdName>w_ar_sg553</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sg553_mag1</modelName>
+		  <txdName>w_ar_sg553_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_anarchist</modelName>
+		  <txdName>w_ar_anarchist</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_anarchist_mag1</modelName>
+		  <txdName>w_ar_anarchist_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_survivorlr</modelName>
+		  <txdName>w_ar_survivorlr</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_survivorlr_mag1</modelName>
+		  <txdName>w_ar_survivorlr_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_lr300</modelName>
+		  <txdName>w_ar_lr300</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_lr300_mag1</modelName>
+		  <txdName>w_ar_lr300_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_biohazard</modelName>
+		  <txdName>w_ar_biohazard</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_biohazard_mag1</modelName>
+		  <txdName>w_ar_biohazard_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_rustak</modelName>
+		  <txdName>w_ar_rustak</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_rustak_mag1</modelName>
+		  <txdName>w_ar_rustak_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_angel</modelName>
+		  <txdName>w_ar_angel</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_angel_mag1</modelName>
+		  <txdName>w_ar_angel_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_azul</modelName>
+		  <txdName>w_ar_azul</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_azul_mag1</modelName>
+		  <txdName>w_ar_azul_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_berserker</modelName>
+		  <txdName>w_ar_berserker</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_berserker_mag1</modelName>
+		  <txdName>w_ar_berserker_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_blackout</modelName>
+		  <txdName>w_ar_blackout</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_blackout_mag1</modelName>
+		  <txdName>w_ar_blackout_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_coldhunter</modelName>
+		  <txdName>w_ar_coldhunter</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_coldhunter_mag1</modelName>
+		  <txdName>w_ar_coldhunter_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_moo</modelName>
+		  <txdName>w_ar_moo</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_moo_mag1</modelName>
+		  <txdName>w_ar_moo_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_deathcharger</modelName>
+		  <txdName>w_ar_deathcharger</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_deathcharger_mag1</modelName>
+		  <txdName>w_ar_deathcharger_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_doodle</modelName>
+		  <txdName>w_ar_doodle</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_doodle_mag1</modelName>
+		  <txdName>w_ar_doodle_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_epidemic</modelName>
+		  <txdName>w_ar_epidemic</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_epidemic_mag1</modelName>
+		  <txdName>w_ar_epidemic_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_glorious</modelName>
+		  <txdName>w_ar_glorious</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_glorious_mag1</modelName>
+		  <txdName>w_ar_glorious_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_glory</modelName>
+		  <txdName>w_ar_glory</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_glory_mag1</modelName>
+		  <txdName>w_ar_glory_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_golden</modelName>
+		  <txdName>w_ar_golden</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_golden_mag1</modelName>
+		  <txdName>w_ar_golden_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_holographic</modelName>
+		  <txdName>w_ar_holographic</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_holographic_mag1</modelName>
+		  <txdName>w_ar_holographic_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_monochrome</modelName>
+		  <txdName>w_ar_monochrome</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_monochrome_mag1</modelName>
+		  <txdName>w_ar_monochrome_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_nomercy</modelName>
+		  <txdName>w_ar_nomercy</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_nomercy_mag1</modelName>
+		  <txdName>w_ar_nomercy_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_oneshot</modelName>
+		  <txdName>w_ar_oneshot</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_oneshot_mag1</modelName>
+		  <txdName>w_ar_oneshot_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_orangeline</modelName>
+		  <txdName>w_ar_orangeline</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_orangeline_mag1</modelName>
+		  <txdName>w_ar_orangeline_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_outpost</modelName>
+		  <txdName>w_ar_outpost</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_outpost_mag1</modelName>
+		  <txdName>w_ar_outpost_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_root9r</modelName>
+		  <txdName>w_ar_root9r</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_root9r_mag1</modelName>
+		  <txdName>w_ar_root9r_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_serwinter</modelName>
+		  <txdName>w_ar_serwinter</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_serwinter_mag1</modelName>
+		  <txdName>w_ar_serwinter_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sinks</modelName>
+		  <txdName>w_ar_sinks</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sinks_mag1</modelName>
+		  <txdName>w_ar_sinks_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_spodumene</modelName>
+		  <txdName>w_ar_spodumene</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_spodumene_mag1</modelName>
+		  <txdName>w_ar_spodumene_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_soul</modelName>
+		  <txdName>w_ar_soul</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_soul_mag1</modelName>
+		  <txdName>w_ar_soul_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_survivor</modelName>
+		  <txdName>w_ar_survivor</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_survivor_mag1</modelName>
+		  <txdName>w_ar_survivor_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_tactical</modelName>
+		  <txdName>w_ar_tactical</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_tactical_mag1</modelName>
+		  <txdName>w_ar_tactical_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_tempered</modelName>
+		  <txdName>w_ar_tempered</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_tempered_mag1</modelName>
+		  <txdName>w_ar_tempered_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_urbancamo</modelName>
+		  <txdName>w_ar_urbancamo</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_urbancamo_mag1</modelName>
+		  <txdName>w_ar_urbancamo_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_victoria</modelName>
+		  <txdName>w_ar_victoria</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_victoria_mag1</modelName>
+		  <txdName>w_ar_victoria_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_wlove</modelName>
+		  <txdName>w_ar_wlove</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_wlove_mag1</modelName>
+		  <txdName>w_ar_wlove_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_wrecked</modelName>
+		  <txdName>w_ar_wrecked</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_wrecked_mag1</modelName>
+		  <txdName>w_ar_wrecked_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_xqc</modelName>
+		  <txdName>w_ar_xqc</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_xqc_mag1</modelName>
+		  <txdName>w_ar_xqc_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_heaven</modelName>
+		  <txdName>w_ar_heaven</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_heaven_mag1</modelName>
+		  <txdName>w_ar_heaven_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_revenge</modelName>
+		  <txdName>w_ar_revenge</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_revenge_mag1</modelName>
+		  <txdName>w_ar_revenge_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_carbinemk4</modelName>
+		  <txdName>w_ar_carbinemk4</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_carbinemk4_mag1</modelName>
+		  <txdName>w_ar_carbinemk4_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_spec</modelName>
+		  <txdName>w_ar_spec</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_spec_mag2</modelName>
+		  <txdName>w_ar_spec_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m13</modelName>
+		  <txdName>w_ar_m13</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m13_mag1</modelName>
+		  <txdName>w_ar_m13_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_grau</modelName>
+		  <txdName>w_ar_grau</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_grau_mag1</modelName>
+		  <txdName>w_ar_grau_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_evo</modelName>
+		  <txdName>w_sb_evo</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_deagle</modelName>
+		  <txdName>w_pi_deagle</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_evo_mag1</modelName>
+		  <txdName>w_sb_evo_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mpx</modelName>
+		  <txdName>w_ar_mpx</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mpx_mag1</modelName>
+		  <txdName>w_ar_mpx_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_acr2</modelName>
+		  <txdName>w_ar_acr2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk416f</modelName>
+		  <txdName>w_ar_hk416f</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk416f_mag1</modelName>
+		  <txdName>w_ar_hk416f_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_hk416f_afgrip</modelName>
+		  <txdName>w_at_hk416f_afgrip</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_516sopmod_afgrip</modelName>
+		  <txdName>w_ar_516sopmod_afgrip</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_hk416f_flsh</modelName>
+		  <txdName>w_at_hk416f_flsh</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_medium_hk416f</modelName>
+		  <txdName>w_at_scope_medium_hk416f</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk416c</modelName>
+		  <txdName>w_ar_hk416c</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk416c_mag1</modelName>
+		  <txdName>w_ar_hk416c_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_ar_afgrip_hk416c</modelName>
+		  <txdName>w_at_ar_afgrip_hk416c</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_hk416c_scope_medium_luxe</modelName>
+		  <txdName>w_at_hk416c_scope_medium_luxe</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_mpx</modelName>
+		  <txdName>w_at_scope_mpx</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>W_AR_CHUCKY</modelName>
+		  <txdName>W_AR_CHUCKY</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_enor</modelName>
+		  <txdName>w_ar_enor</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ENOR_mag1</modelName>
+		  <txdName>w_ar_ENOR_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_ar_afgrip</modelName>
+		  <txdName>w_at_ar_afgrip</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>W_AR_CHUCKY_MAG1</modelName>
+		  <txdName>W_AR_CHUCKY_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_strimed</modelName>
+		  <txdName>w_ar_strimed</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_fnpistol</modelName>
+		  <txdName>w_pi_fnpistol</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_me_lightsaber</modelName>
+		  <txdName>w_me_lightsaber</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_pof</modelName>
+		  <txdName>w_ar_pof</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_pof_mag1</modelName>
+		  <txdName>w_ar_pof_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sg_fntac</modelName>
+		  <txdName>w_sg_fntac</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_stoner</modelName>
+		  <txdName>w_ar_stoner</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ak74u_smg</modelName>
+		  <txdName>w_ar_ak74u_smg</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ak74u_smg_mag1</modelName>
+		  <txdName>w_ar_ak74u_smg_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_car</modelName>
+		  <txdName>w_ar_car</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_fal</modelName>
+		  <txdName>w_ar_fal</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_fal_mag1</modelName>
+		  <txdName>w_ar_fal_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_CAR_mag1</modelName>
+		  <txdName>w_ar_CAR_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hawk</modelName>
+		  <txdName>w_ar_hawk</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_ppsh</modelName>
+		  <txdName>w_sb_ppsh</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_msbs</modelName>
+		  <txdName>w_ar_msbs</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mcx</modelName>
+		  <txdName>w_ar_mcx</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mcx_mag1</modelName>
+		  <txdName>w_ar_mcx_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_msbs_mag1</modelName>
+		  <txdName>w_ar_msbs_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_msbs_afgrip</modelName>
+		  <txdName>w_at_msbs_afgrip</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_awm</modelName>
+		  <txdName>w_sr_awm</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_awm_mag1</modelName>
+		  <txdName>w_sr_awm_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_msbs</modelName>
+		  <txdName>w_at_scope_msbs</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_m98_scope_large</modelName>
+		  <txdName>w_at_m98_scope_large</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk418_mag2</modelName>
+		  <txdName>w_ar_hk418_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_cr_hk418_barrel_1</modelName>
+		  <txdName>w_at_cr_hk418_barrel_1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m4a1desert</modelName>
+		  <txdName>w_ar_m4a1desert</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_grau_supp_02</modelName>
+		  <txdName>w_at_grau_supp_02</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_hk418_supp</modelName>
+		  <txdName>w_at_hk418_supp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_hk_supp</modelName>
+		  <txdName>w_at_hk_supp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_medium_hk418</modelName>
+		  <txdName>w_at_scope_medium_hk418</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_bora_scope_max</modelName>
+		  <txdName>w_at_bora_scope_max</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_awm</modelName>
+		  <txdName>w_at_scope_awm</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_m4a1t_supp</modelName>
+		  <txdName>w_at_m4a1t_supp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_m98barret</modelName>
+		  <txdName>w_sr_m98barret</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ak74</modelName>
+		  <txdName>w_ar_ak74</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_M16A4_mag1</modelName>
+		  <txdName>w_ar_M16A4_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_M16A2_mag1</modelName>
+		  <txdName>w_ar_M16A2_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_barret_mag1</modelName>
+		  <txdName>w_sr_barret_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk870_mag1</modelName>
+		  <txdName>w_ar_hk870_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sp1_mag2</modelName>
+		  <txdName>w_ar_sp1_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_aug_mag1</modelName>
+		  <txdName>w_ar_aug_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ak74_mag1</modelName>
+		  <txdName>w_ar_ak74_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sig_mag1</modelName>
+		  <txdName>w_ar_sig_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_fnp_mag1</modelName>
+		  <txdName>w_pi_fnp_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_mp40_mag1</modelName>
+		  <txdName>w_sb_mp40_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_mp5_mag1</modelName>
+		  <txdName>w_sb_mp5_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_sb_microsmg_mag1</modelName>
+		  <txdName>w_sb_microsmg_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_sb_vesper_mag1</modelName>
+		  <txdName>w_sb_vesper_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_vom_mag1</modelName>
+		  <txdName>w_pi_vom_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_m1911</modelName>
+		  <txdName>w_pi_m1911</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_beretta</modelName>
+		  <txdName>w_pi_beretta</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mosin</modelName>
+		  <txdName>w_ar_mosin</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sg_kar98</modelName>
+		  <txdName>w_sg_kar98</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_mp40</modelName>
+		  <txdName>w_sb_mp40</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_mp5</modelName>
+		  <txdName>w_sb_mp5</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_sb_microsmg</modelName>
+		  <txdName>w_sb_microsmg</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_sb_pdw</modelName>
+		  <txdName>w_sb_pdw</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_pdw_mag1</modelName>
+		  <txdName>w_sb_pdw_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>				
+		<Item>
+		  <modelName>w_ar_ak74kashnar</modelName>
+		  <txdName>w_ar_ak74kashnar</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_416D</modelName>
+		  <txdName>w_ar_416D</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_fnx</modelName>
+		  <txdName>w_pi_fnx</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_fnfal</modelName>
+		  <txdName>w_ar_fnfal</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_barret</modelName>
+		  <txdName>w_sr_barret</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_lvoac</modelName>
+		  <txdName>w_ar_lvoac</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_lvoac_mag1</modelName>
+		  <txdName>w_ar_lvoac_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk416</modelName>
+		  <txdName>w_ar_hk416</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_scar</modelName>
+		  <txdName>w_ar_scar</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_scarww3</modelName>
+		  <txdName>w_ar_scarww3</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_scarww3_mag1</modelName>
+		  <txdName>w_ar_scarww3_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_scarww3_mag2</modelName>
+		  <txdName>w_ar_scarww3_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_acr</modelName>
+		  <txdName>w_ar_acr</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_mg_m249</modelName>
+		  <txdName>w_mg_m249</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+				<Item>
+		  <modelName>W_AR_SIG</modelName>
+		  <txdName>W_AR_SIG</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+				<Item>
+		  <modelName>w_ar_aug</modelName>
+		  <txdName>w_ar_aug</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk</modelName>
+		  <txdName>w_ar_hk</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_sv</modelName>
+		  <txdName>w_sr_sv</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_sv_mag1</modelName>
+		  <txdName>w_sr_sv_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_tac</modelName>
+		  <txdName>w_ar_tac</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_tac_mag1</modelName>
+		  <txdName>w_ar_tac_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sb_vesper</modelName>
+		  <txdName>w_sb_vesper</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_svd</modelName>
+		  <txdName>w_sr_svd</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_at_svd_scope_large</modelName>
+		  <txdName>w_at_svd_scope_large</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_sr_svd_mag1</modelName>
+		  <txdName>w_sr_svd_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sg_winchester12</modelName>
+		  <txdName>w_sg_winchester12</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>			
+		<Item>
+		  <modelName>w_ar_akm_mag1</modelName>
+		  <txdName>w_ar_akm_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_akm_mag2</modelName>
+		  <txdName>w_ar_akm_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_ar_akm</modelName>
+		  <txdName>w_ar_akm</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>		
+		<Item>
+		  <modelName>w_ar_AK74KASHNAR_mag1</modelName>
+		  <txdName>w_ar_AK74KASHNAR_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_sv98_scope_max</modelName>
+		  <txdName>w_at_sv98_scope_max</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>	
+		<Item>
+		  <modelName>w_at_msr_scope_large</modelName>
+		  <txdName>w_at_msr_scope_large</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>	
+		<Item>
+		  <modelName>w_ar_scarl</modelName>
+		  <txdName>w_ar_scarl</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+	    <Item>
+		  <modelName>w_ar_scarl_mag1</modelName>
+		  <txdName>w_ar_scarl_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_famas</modelName>
+		  <txdName>w_ar_famas</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_bora</modelName>
+		  <txdName>w_sr_bora</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_bora_mag1</modelName>
+		  <txdName>w_sr_bora_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_nv4</modelName>
+		  <txdName>w_ar_nv4</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_nv4_mag1</modelName>
+		  <txdName>w_ar_nv4_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hkg3</modelName>
+		  <txdName>w_ar_hkg3</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hkg3_mag1</modelName>
+		  <txdName>w_ar_hkg3_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hkg3_mag2</modelName>
+		  <txdName>w_ar_hkg3_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_re6</modelName>
+		  <txdName>w_ar_re6</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_re6_mag1</modelName>
+		  <txdName>w_ar_re6_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_akkal</modelName>
+		  <txdName>w_ar_akkal</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_re6</modelName>
+		  <txdName>w_at_scope_re6</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_vanquish</modelName>
+		  <txdName>w_ar_vanquish</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_vanquish_mag1</modelName>
+		  <txdName>w_ar_vanquish_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_neon</modelName>
+		  <txdName>w_ar_neon</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_neon_mag1</modelName>
+		  <txdName>w_ar_neon_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_carbon</modelName>
+		  <txdName>w_ar_carbon</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_carbon_mag1</modelName>
+		  <txdName>w_ar_carbon_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_assimov</modelName>
+		  <txdName>w_ar_assimov</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_assimov_mag1</modelName>
+		  <txdName>w_ar_assimov_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m4a1t</modelName>
+		  <txdName>w_ar_m4a1t</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_acwr</modelName>
+		  <txdName>w_ar_acwr</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m4a11</modelName>
+		  <txdName>w_ar_m4a11</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m203</modelName>
+		  <txdName>w_ar_m203</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m203_mag1</modelName>
+		  <txdName>w_ar_m203_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sc2010</modelName>
+		  <txdName>w_ar_sc2010</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ar160</modelName>
+		  <txdName>w_ar_ar160</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m4colt</modelName>
+		  <txdName>w_ar_m4colt</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ar15</modelName>
+		  <txdName>w_ar_ar15</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_ar15_afgrip</modelName>
+		  <txdName>w_at_ar15_afgrip</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_ar15_mag1</modelName>
+		  <txdName>w_ar_ar15_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_ar15_supp</modelName>
+		  <txdName>w_at_ar15_supp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_ar15</modelName>
+		  <txdName>w_at_scope_ar15</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_ar15_flsh</modelName>
+		  <txdName>w_at_ar15_flsh</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m4colt_mag1</modelName>
+		  <txdName>w_ar_m4colt_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_re6</modelName>
+		  <txdName>w_sr_re6</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_re6rn</modelName>
+		  <txdName>w_ar_re6rn</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_devgru</modelName>
+		  <txdName>w_ar_devgru</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sp1</modelName>
+		  <txdName>w_ar_sp1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_famasg2</modelName>
+		  <txdName>w_ar_famasg2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_r5</modelName>
+		  <txdName>w_ar_r5</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_fnp</modelName>
+		  <txdName>w_pi_fnp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk870</modelName>
+		  <txdName>w_ar_hk870</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mk18</modelName>
+		  <txdName>w_ar_mk18</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk418</modelName>
+		  <txdName>w_ar_hk418</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_carbinemk3</modelName>
+		  <txdName>w_ar_carbinemk3</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m16vn</modelName>
+		  <txdName>w_ar_m16vn</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m16vn_mag1</modelName>
+		  <txdName>w_ar_m16vn_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_g36k</modelName>
+		  <txdName>w_ar_g36k</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_g36k_mag1</modelName>
+		  <txdName>w_ar_g36k_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_g36k_mag2</modelName>
+		  <txdName>w_ar_g36k_mag2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_val</modelName>
+		  <txdName>w_ar_val</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_val_mag1</modelName>
+		  <txdName>w_ar_val_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+    <Item>
+      <modelName>w_ar_devgru_mag1</modelName>
+      <txdName>w_ar_devgru_mag1</txdName>
+      <ptfxAssetName>NULL</ptfxAssetName>
+      <lodDist value="500"/>
+    </Item>
+    <Item>
+      <modelName>w_ar_riflev2_mag1</modelName>
+      <txdName>w_ar_riflev2_mag1</txdName>
+      <ptfxAssetName>NULL</ptfxAssetName>
+      <lodDist value="500"/>
+    </Item>
+    <Item>
+      <modelName>w_at_devgru_ar_afgrip</modelName>
+      <txdName>w_at_devgru_ar_afgrip</txdName>
+      <ptfxAssetName>NULL</ptfxAssetName>
+      <lodDist value="500"/>
+    </Item>
+		<Item>
+ 		  <modelName>w_at_devgru_flsh</modelName>
+		  <txdName>w_at_devgru_flsh</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+ 		  <modelName>w_at_mcx_flsh</modelName>
+		  <txdName>w_at_mcx_flsh</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+ 		  <modelName>w_at_scope_devgru</modelName>
+		  <txdName>w_at_scope_devgru</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+  	<Item>
+ 		  <modelName>w_at_devgru_supp</modelName>
+		  <txdName>w_at_devgru_supp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_hk416sf</modelName>
+		  <txdName>w_ar_hk416sf</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_m4colt_supp</modelName>
+		  <txdName>w_at_m4colt_supp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_m4colt</modelName>
+		  <txdName>w_at_scope_m4colt</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_516sopmod</modelName>
+		  <txdName>w_at_scope_516sopmod</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_car_supp_02</modelName>
+		  <txdName>w_at_car_supp_02</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_at_scope_car</modelName>
+		  <txdName>w_at_scope_car</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_sigmpx</modelName>
+		  <txdName>w_ar_sigmpx</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+	    <Item>
+		  <modelName>w_pi_glock17</modelName>
+		  <txdName>w_pi_glock17</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_m16a2</modelName>
+		  <txdName>w_ar_m16a2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+	    <Item>
+		  <modelName>w_ar_m16a4</modelName>
+		  <txdName>w_ar_m16a4</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_msr</modelName>
+		  <txdName>w_sr_msr</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_sr_msr_mag1</modelName>
+		  <txdName>w_sr_msr_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_ots_mag1</modelName>
+		  <txdName>w_pi_ots_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_ots</modelName>
+		  <txdName>w_pi_ots</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_riflev2</modelName>
+		  <txdName>w_ar_riflev2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_l119a2</modelName>
+		  <txdName>w_ar_l119a2</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_l119a2_mag1</modelName>
+		  <txdName>w_ar_l119a2_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_pi_vom</modelName>
+		  <txdName>w_pi_vom</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_mp40</modelName>
+		  <txdName>w_ar_mp40</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_scar_mag1</modelName>
+		  <txdName>w_ar_scar_mag1</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		<Item>
+		  <modelName>w_ar_assaultrifle</modelName>
+		  <txdName>w_ar_assaultrifle</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="500"/>
+		</Item>
+		</InitDatas>
+</CWeaponModelInfo__InitDataList>

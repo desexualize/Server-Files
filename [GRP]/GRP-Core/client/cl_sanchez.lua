@@ -1,0 +1,73 @@
+-- RMenu.Add('SanchezMenu', 'main', RageUI.CreateMenu("", "Purchase Sanchez Menu", 1300, 50))
+-- 
+-- RageUI.CreateWhile(1.0, RMenu:Get('SanchezMenu', 'main'), nil, function()
+-- 
+--     RageUI.IsVisible(RMenu:Get('SanchezMenu', 'main'), true, false, true, function()
+-- 
+--         RageUI.Button("Purchase Sanchez" , nil, {RightLabel = ""}, true, function(Hovered, Active, Selected)
+--             if Selected then
+--                 TriggerServerEvent('addSanchez')
+--                 notify('~g~Purchased Sanchez for £0. This will now be in your garage!')
+--                 TriggerEvent('GRP:PlaySound', 1)
+--             end
+--         end)
+-- 
+-- 
+-- 
+--     end, function()
+--        
+--     end)
+-- end)
+-- 
+-- coordShop2 = {
+--     {-533.90118408203,-223.26290893555,37.649707794189},
+--     {1705.2547607422,3778.3188476562,34.756122589111},
+-- }
+-- 
+-- isInSanchez = false
+-- currentAmmunition = nil
+-- Citizen.CreateThread(function() 
+--     while true do
+--         for i , p in pairs(coordShop2) do 
+--                 local v1 = vector3(p[1], p[2], p[3])
+-- 
+--                 if isInArea(v1, 100.0) then 
+--                     DrawMarker(2, v1, 0, 0, 0, 0, 0, 0, 0.4, 0.4, 0.4, 0, 191, 255, 150, true, true, 0, 0, 0, 0, 0)
+--                 end
+--                 if isInSanchez == false then
+--                 if isInArea(v1, 1.4) then 
+--                     alert('Press ~INPUT_VEH_HORN~ to open Vehicle Menu')
+--                     if IsControlJustPressed(0, 51) then 
+--                         currentAmmunition = k
+--                         RageUI.Visible(RMenu:Get("SanchezMenu", "main"), true)
+--                         isInSanchez = true
+--                         currentAmmunition = k 
+--                     end
+--                 end
+--                 end
+--                 if isInArea(v1, 1.4) == false and isInSanchez and k == currentAmmunition then
+--                     
+--                    
+--                     isInSanchez = false
+--                     currentAmmunition = nil
+--                 end
+--                 
+--             end
+--        
+--         Citizen.Wait(0)
+--     end
+-- end)
+-- 
+-- 
+-- function isInArea(v, dis) 
+--     
+--     if #(GetEntityCoords(PlayerPedId(-1)) - v) <= dis then  
+--         return true
+--     else 
+--         return false
+--     end
+-- end
+
+
+
+

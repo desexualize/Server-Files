@@ -1,0 +1,12 @@
+local Tunnel = module("vrp", "lib/Tunnel")
+local Proxy = module("vrp", "lib/Proxy")
+vRP = Proxy.getInterface("vRP")
+vRPclient = Tunnel.getInterface("vRP","vRP_Hud")
+
+RegisterServerEvent('Galaxy:BankCash')
+AddEventHandler('Galaxy:BankCash', function()
+    local user_id = vRP.getUserId({source})
+    local bank = vRP.getBankMoney({user_id})
+    local cash = vRP.getMoney({user_id})
+    TriggerClientEvent('Galaxy:CashBankClient', source, bank, cash, user_id)
+end)
