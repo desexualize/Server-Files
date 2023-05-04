@@ -1,0 +1,16 @@
+@import '~index';
+
+.keyboard-space {
+  position: absolute;
+  bottom: 3em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  kbd {
+    border-radius: 0.25rem;
+    padding: 0.3rem 0.625rem;
+    margin: 0.25rem;
+    text-decoration: none;
+    background: $color-bg;
+  }
+}

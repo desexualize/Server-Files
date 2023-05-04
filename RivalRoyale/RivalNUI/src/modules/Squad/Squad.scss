@@ -1,0 +1,470 @@
+@import '~index';
+
+.side-navbar {
+  @include flex(flex-start, flex-start, column);
+
+  position: absolute;
+  left: 3.5625em;
+  top: 2.5625em;
+  z-index: 1;
+
+  button {
+    @include hover-effect();
+
+    border-left: 0.375rem solid $color-primary;
+    background-color: $color-bg;
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 0.875rem;
+    margin-top: 0.8125rem;
+  }
+
+  .side-navbar-icons {
+    @include flex;
+
+    section {
+      @include flex(center, center);
+
+      transition: 250ms transform ease;
+      background: $color-bg;
+      border: 0.375em solid #2b2b2b;
+      margin-inline: 0.25em;
+      transform: skew(-15deg);
+      width: 4.25em;
+      height: 3.4375em;
+      cursor: pointer;
+
+      label {
+        transform: skew(15deg);
+        margin-left: 0.5625rem;
+        font-size: 1.875rem;
+        font-weight: 800;
+      }
+
+      img {
+        transform: skew(15deg);
+        width: 2.125em;
+        height: 2.125em;
+      }
+
+      &:hover {
+        transform: skew(-15deg) translateY(-0.5rem);
+      }
+    }
+
+    #friend-list {
+      width: 7.5625em;
+
+      img {
+        width: 2.4375em;
+        height: 1.9375em;
+      }
+    }
+  }
+}
+
+.side-menu-container {
+  @include flex(flex-start, center, column);
+
+  position: absolute;
+  background: rgba($color-black, 0.5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 27.75%;
+  height: 100vh;
+  transform: translateX(-125%);
+  animation: 350ms slide-in ease forwards;
+}
+
+.slideRight {
+  animation: 350ms slide-out ease forwards;
+}
+
+.chat-container {
+  position: fixed;
+  width: 29.75em;
+  height: 18.5em;
+  bottom: 1.625em;
+  left: 3em;
+
+  section {
+    @include flex(center, center);
+
+    height: 1.393125rem;
+    width: 7.375rem;
+    transition: background-color 250ms;
+    background-color: rgba($color-black, 0.5);
+
+    label {
+      font-size: 0.9375rem;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    &:not(.chat-active-section):hover {
+      background-color: rgba($color-hovered, 0.5);
+    }
+  }
+
+  .chat-hidden {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.chat-sections {
+  @include flex;
+
+  width: 100%;
+  margin-top: 0.5625em;
+  overflow: hidden;
+
+  section {
+    transform: skewX(-20deg);
+    margin-inline: 0.4375rem;
+    text-align: center;
+
+    &:first-child {
+      margin-left: -0.3125rem;
+
+      label {
+        transform: skewX(20deg);
+        margin-right: -0.3125rem;
+      }
+    }
+
+    &:last-child {
+      display: inline-block;
+      margin-right: -0.3125rem;
+
+      label {
+        transform: skewX(20deg);
+        margin-left: -0.3125rem;
+      }
+    }
+
+    label {
+      transform: skewX(20deg);
+    }
+  }
+}
+
+.chat-flow {
+  overflow: scroll;
+  background: rgba(29, 29, 29, 0.5);
+  margin-top: 0.5625em;
+  width: 100%;
+  height: 13.125em;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chat-message {
+    width: 100%;
+    margin-left: 0.5em;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    word-break: break-word;
+    user-select: auto;
+
+    #tag {
+      color: #0066ff;
+    }
+
+    #name {
+      color: $color-primary;
+    }
+
+    &:first-child {
+      margin-top: 0.5em;
+    }
+
+    &:last-child {
+      margin-bottom: 0.5em;
+    }
+
+    &::selection {
+      background: $color-primary;
+      color: $color-black;
+    }
+  }
+}
+
+.chat-input {
+  @include flex(flex-start, center);
+  background: rgba($color-bg, 0.75);
+  height: 1.875em;
+  width: 100%;
+
+  img {
+    width: 1em;
+    margin-left: 0.7em;
+    aspect-ratio: 1 / 1;
+  }
+
+  input {
+    background: transparent;
+    width: calc(100% - 3em);
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 0.625rem;
+    user-select: auto;
+
+    &::selection {
+      background: $color-primary;
+      color: $color-black;
+    }
+  }
+}
+
+.chat-active-section {
+  background: $color-primary !important;
+
+  label {
+    color: $color-black !important;
+  }
+}
+
+.ready-button {
+  @include background-image('https://i.imgur.com/wB9XCmM.png');
+  @include center;
+
+  position: absolute;
+  width: 27.3125em;
+  height: 8.43em;
+  right: 4.875em;
+  bottom: 5.5625em;
+
+  h1 {
+    font-weight: 800;
+    font-size: 3.125em;
+  }
+}
+.side-menu-section {
+  @include flex(space-between, center);
+
+  margin: 1.25em 0;
+  width: 26.5em;
+  height: 4.6875em;
+  overflow: hidden;
+
+  section {
+    background: rgba($color-black, 0.5);
+    width: 14.25em;
+    height: 4.6875em;
+    transform: skew(-30deg);
+    transition: 250ms linear background;
+    text-align: center;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: skew(30deg) translate(-50%, -50%);
+      font-weight: 900;
+      font-size: 1.5625rem;
+    }
+  }
+
+  .active {
+    background: rgba($color-hovered, 0.5);
+  }
+}
+
+.side-menu-card {
+  background: rgba($color-black, 0.5);
+  border-left: 0.5rem solid $color-primary;
+  margin-block: 0.625rem;
+  width: 100%;
+  height: 3.4375rem;
+  font-weight: 800;
+  font-style: italic;
+  transition: background 150ms linear;
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  &:not(.offline-friend-card):hover {
+    background: rgba($color-hovered, 0.5);
+  }
+}
+
+.squad-wrapper {
+  @include flex(flex-start, center, column);
+
+  position: fixed;
+  right: 3.3125em;
+  width: 24.895%;
+  bottom: 1.625em;
+}
+
+.squad-btn-group {
+  @include flex(center, center, column);
+
+  width: 100%;
+  height: 17.1875em;
+  background: rgba($color-black, 0.25);
+
+  div {
+    // width: Clamp(0em, 27.9375em, 27.9375em);
+    @include hover-effect();
+
+    width: 93.514%;
+    height: 49.09%;
+  }
+
+  #ready {
+    @include center;
+    @include background-image('https://i.imgur.com/rUls5aZ.png');
+    margin-top: 0.8125em;
+
+    label {
+      font-size: 3.125rem;
+    }
+  }
+
+  #game-mode-banner {
+    background-image: url('https://i.imgur.com/EdDyEMn.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 6.25em;
+    border-block: 0.375em solid #353535;
+  }
+
+  #game-mode {
+    @include center;
+
+    background: $color-bg;
+    border-block: 0.375em solid #353535;
+    height: 6.25em;
+
+    label {
+      font-weight: 900;
+      font-size: 1.875rem;
+      color: #a6a6a6;
+    }
+  }
+}
+
+.info-bar-container {
+  @include flex(flex-start, flex-start, column);
+
+  position: relative;
+  width: 100%;
+  height: 58.7037vh;
+  background: rgba($color-black, 0.5);
+}
+
+.info-bar-xp-container {
+  @include flex(flex-start, flex-start, column);
+  margin-top: 1.8125em;
+  margin-left: 2.8125em;
+  width: 100%;
+
+  .info-bar-xp-current {
+    margin-top: 0.3125rem;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: $color-primary;
+  }
+
+  .info-bar-xp-progress {
+    position: relative;
+    margin-top: 0.6875em;
+    margin-left: -1.1875em;
+    margin-bottom: 0.3125em;
+    height: 1.0625em;
+    width: 89.53%;
+    background: #3f3f3f;
+    transform: skew(-25deg);
+
+    div {
+      z-index: 1;
+      height: 100%;
+      background: $color-primary;
+    }
+  }
+
+  div {
+    @include flex(flex-start, flex-end);
+
+    label {
+      font-style: italic;
+      font-size: 1.875rem;
+    }
+
+    span {
+      color: $color-primary;
+      font-weight: 900;
+      font-size: 3.125rem;
+      line-height: 3.125rem;
+    }
+  }
+}
+
+.info-bar-challenges-content {
+  font-size: 1.5625rem;
+  margin: 3.5rem 0rem 1.875rem 2.375rem;
+
+  font-style: italic;
+
+  span {
+    color: $color-primary;
+  }
+}
+
+.info-bar-xp-challenges {
+  margin-left: 2.375rem;
+}
+
+.challenge-wrapper {
+  &:not(:first-child):not(:last-child) {
+    margin-block: 3.25em;
+  }
+
+  &:last-child {
+    margin-bottom: 3.9375em;
+  }
+
+  .challenge-title {
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .challenge-section {
+    @include flex(flex-start, center);
+
+    label {
+      font-style: italic;
+      font-size: 1.25rem;
+      margin-left: 0.75rem;
+      margin-bottom: -0.3125rem;
+      color: $color-primary;
+    }
+  }
+
+  .challenge-progress-bar {
+    margin-top: 0.4375rem;
+    background: #3f3f3f;
+    width: 17.8125em;
+    height: 1em;
+    transform: skew(-25deg);
+
+    div {
+      z-index: 1;
+      height: 100%;
+      background: $color-primary;
+      transition: width 0.5s ease;
+    }
+  }
+}

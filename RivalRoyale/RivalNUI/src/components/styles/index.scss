@@ -1,0 +1,336 @@
+@import '~index';
+
+.modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: 250ms fade-in ease;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textfield {
+  outline: 0;
+  border-style: none;
+  padding: 0.5em;
+  padding-left: 5px;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  color: black;
+}
+
+.notification-root {
+  position: fixed;
+  top: 10em;
+  left: 0;
+  width: 28em;
+  max-height: 80vh;
+}
+
+.notification {
+  @include flex(space-between, center);
+
+  background: rgba($color-black, 0.5);
+  z-index: 10;
+  width: 100%;
+  height: 6.46875em;
+  margin-block: 1em;
+  border-right: 0.625em solid $color-primary;
+  transform: translateX(-125%);
+  font-style: italic;
+  animation: 250ms slide-in ease forwards;
+}
+
+.notification-content {
+  @include flex(center, flex-start, column);
+  width: inherit;
+  height: inherit;
+}
+
+.notification-invite {
+  .notification-btn-group {
+    #primary {
+      background: #48dd69;
+    }
+
+    #secondary {
+      background: #ec3535;
+    }
+  }
+}
+
+.notification-btn-group {
+  @include flex(space-between, center, column);
+  height: 4.3125em;
+  margin-right: 1.8125em;
+
+  button {
+    border-style: none;
+    outline: none;
+    width: 6.5rem;
+    height: 1.75rem;
+    background: #4d4d4d;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.notification-title {
+  margin-left: 1.1rem;
+  font-size: 2.3rem;
+  color: $color-primary;
+  font-weight: 900;
+}
+
+.notification-text {
+  margin-left: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.notification-root {
+  .exit-active {
+    animation: 250ms slide-out ease forwards;
+  }
+}
+
+.text-modal {
+  @include flex(space-between, flex-start, column);
+  background: rgba($color-black, 0.5);
+  width: 27% !important;
+  height: 40% !important;
+
+  textarea {
+    margin-left: 2.5rem;
+    margin-top: 0.65rem;
+    resize: none;
+    width: 75%;
+    height: 10rem;
+    transition: 250ms border ease-in-out;
+    background: linear-gradient(0deg, rgba(80, 80, 80, 0.5), rgba(80, 80, 80, 0.5)),
+      rgba(0, 0, 0, 0.5);
+    padding: 0.5em;
+    font-size: 0.8rem;
+
+    &:focus-within {
+      border: 0.1em solid $color-primary;
+    }
+  }
+}
+
+.text-modal-title {
+  margin-top: 1.25em;
+  margin-left: 2.5em;
+
+  h1 {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 2.5rem;
+
+    span {
+      color: $color-primary;
+    }
+  }
+}
+
+.text-modal-subtitle,
+.text-modal-description {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-left: 2.5rem;
+}
+
+.text-modal-description {
+  margin-top: 1.9rem;
+}
+
+.text-modal-btn-group {
+  @include flex(space-between, center);
+
+  width: 75%;
+  margin-block: 1.25em;
+  margin-left: 2.5em;
+
+  button {
+    @include hover-effect();
+
+    border-style: none;
+    outline: none;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 900;
+    font-size: 1rem;
+    border-bottom: 5px solid white;
+    padding: 0.5rem 2.9rem;
+    background-color: rgba(44, 44, 44, 0.5);
+  }
+
+  #cancel {
+    border-color: #505050;
+    color: #505050;
+  }
+
+  #submit {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.navbar-container {
+  @include flex(center, center);
+
+  position: absolute;
+  height: 3.125em;
+  top: 2.5625em;
+  left: 50%;
+  transform: translate(-50%);
+
+  .navbar-item {
+    @include center;
+
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba($color-black, 0.5) 0%, rgba(24, 24, 24, 0) 100%);
+    margin-inline: 0.75rem;
+    width: 9.375rem;
+    height: 100%;
+    transition: 250ms background-color ease;
+
+    label {
+      font-size: 1.25rem;
+    }
+
+    &:not(.active):not(.disabled-nav):hover {
+      background-color: rgba($color-black, 0.5);
+    }
+  }
+
+  .disabled-nav {
+    cursor: not-allowed;
+
+    label {
+      cursor: inherit;
+    }
+  }
+
+  .active {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(24, 24, 24, 0) 100%);
+    border-bottom: 0.3125rem solid $color-primary;
+
+    label {
+      margin-top: 0.3125rem;
+    }
+  }
+}
+
+.btn-return {
+  position: fixed;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 0.8125rem 2.9375rem;
+  border-left: 6px solid $color-primary;
+  background-color: rgba($color-black, 0.5);
+  top: 2.5625rem;
+  left: 5.5rem;
+  transition: 250ms ease background-color;
+
+  &:hover {
+    background-color: black;
+  }
+}
+
+.credits-container {
+  @include background-image('https://i.imgur.com/1sP5uTp.png');
+
+  position: absolute;
+  z-index: 1;
+  top: 68px;
+  right: 100px;
+  width: 14.3125em;
+  height: 2.6875em;
+
+  div {
+    vertical-align: center;
+    text-align: center;
+  }
+
+  label {
+    font-size: 2.1875rem;
+    font-weight: 800;
+    color: #474747;
+  }
+
+  .credits-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.player-search {
+  @include flex(center, center);
+
+  img {
+    width: 2.3125em;
+  }
+
+  .player-search-bar {
+    background: rgba($color-black, 0.5);
+    width: 87.97%;
+    height: 2.375rem;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
+    margin-left: 0.875rem;
+  }
+}
+
+.kill-feed {
+  @include flex(flex-start, flex-end, column);
+
+  position: fixed;
+  top: 8em;
+  right: 2.4875em;
+  z-index: 1;
+
+  .enter-active {
+    animation: fade-in 750ms ease;
+  }
+
+  .exit-active {
+    animation: fade-out 750ms ease;
+  }
+
+  label {
+    background: rgba($color-black, 0.5);
+    font-size: 1.25rem;
+    padding: 0.1rem 0.5rem;
+    margin-block: 0.2rem;
+
+    span {
+      color: $color-primary;
+    }
+  }
+}
+
+.overlay {
+  background: rgba($color-black, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+}

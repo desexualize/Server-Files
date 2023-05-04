@@ -1,0 +1,194 @@
+@import '~index';
+
+.game-wrapper {
+  .inventory-hotbar {
+    position: absolute;
+    left: 50%;
+    bottom: 0.5em;
+    transform: translateX(-50%);
+
+    .inventory-item {
+      width: 4.8828125vw;
+      height: 4.8828125vw;
+      font-size: 10px !important;
+      margin-inline: 0.3em !important;
+    }
+
+    .hotbar-num {
+      label {
+        top: 50%;
+      }
+    }
+  }
+}
+
+.squad-players {
+  @include flex(flex-start, flex-start, column);
+
+  position: absolute;
+  top: 4em;
+  left: 4em;
+
+  section {
+    @include flex(center, center);
+    margin-bottom: 0.375em;
+
+    img {
+      width: 2.375em;
+      border: 2px solid #3c3c3c;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: 50%;
+      transition: 250ms ease border;
+    }
+
+    label {
+      font-size: 0.9375rem;
+      font-weight: 900;
+      margin-left: 0.6875em;
+    }
+  }
+}
+
+.compass-overlay {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: -0.75em;
+    width: 1.5625em;
+    height: 1.5625em;
+  }
+}
+
+.compass-wrapper {
+  position: absolute;
+  overflow: hidden;
+  width: 25em;
+  height: 1.5em;
+  left: 50%;
+  top: 1.7rem;
+  transform: translate(-50%, -50%);
+
+  div {
+    height: 100%;
+    background-position: center center;
+    background-size: 25em;
+    background-repeat: repeat;
+    width: 800%;
+    z-index: 1;
+    background-image: url(https://cdn.discordapp.com/attachments/887676761410793502/892476714918224003/Untitled-3.png);
+  }
+}
+
+.ingame-weapon-holder {
+  @include flex(flex-start, center);
+
+  position: fixed;
+  right: 2.6875em;
+  bottom: 2.6875em;
+
+  img {
+    width: 13.25em;
+    margin-right: 0.84375em;
+  }
+
+  section {
+    height: 4.25em;
+    width: 0.1875em;
+    background: white;
+  }
+
+  .image-weapon-holder-content {
+    @include flex(center, flex-start, column);
+    margin-left: 0.84375em;
+    width: 5.9375em;
+
+    div {
+      @include flex(flex-start, flex-end);
+      position: relative;
+
+      span {
+        color: $color-primary;
+        font-size: 2.3125rem;
+        line-height: 2.3125rem;
+      }
+
+      p {
+        font-size: 1.4375rem;
+        line-height: 1.4375rem;
+        font-weight: 800;
+      }
+    }
+
+    label {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.waiting-stage {
+  position: fixed;
+  top: 2em;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.water-mark {
+  position: fixed;
+  top: 3em;
+  right: 3em;
+  width: 7em;
+}
+
+.game-info-container {
+  @include flex(center, center);
+
+  position: fixed;
+  width: 16.6875em;
+  height: 1.875em;
+
+  section {
+    @include flex(flex-start, center);
+    background: rgba($color-black, 0.5);
+    padding: 0.1875em 0.8125em;
+    border-radius: 0.59375em;
+    min-width: 4.625em;
+    margin-inline: 0.25em;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    label {
+      font-size: 1.125rem;
+      margin-left: 0.125em;
+      color: $color-primary;
+    }
+
+    &:first-child {
+      min-width: 6.875em !important;
+    }
+
+    &:nth-child(2) {
+      img {
+        width: 1.1875em;
+        height: 1.5625em;
+      }
+    }
+
+    &:last-child() {
+      img {
+        width: 1.5625em;
+        height: 1.6875em;
+      }
+    }
+  }
+}

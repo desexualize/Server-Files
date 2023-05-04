@@ -1,0 +1,175 @@
+@import '~index';
+
+.admin-banner {
+  @include flex(center, center);
+  background: rgba($color-black, 0.5);
+  width: 100%;
+  height: 4.6875em;
+  margin-top: 3.75em;
+
+  img {
+    width: 3.6875em;
+    height: 3.6875em;
+  }
+
+  section {
+    @include flex(flex-start, flex-start, column);
+    margin-left: 1em;
+
+    span {
+      color: $color-primary;
+      font-weight: 900;
+      font-size: 2.5rem;
+    }
+
+    label {
+      font-style: italic;
+      font-weight: 800;
+      font-size: 0.9375rem;
+      margin-top: -0.3125rem;
+    }
+  }
+}
+
+.reports-container {
+  width: 83.3%;
+  height: 43.75em;
+  margin-top: 3.5em;
+  overflow: auto;
+
+  .modal {
+    @include flex(space-evenly, flex-end);
+    // border: 0.3125em solid $color-primary;
+
+    video {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      @include hover-effect();
+
+      padding: 1rem 0;
+      width: 12rem;
+      box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+      text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: -4.5rem;
+      z-index: 1;
+    }
+  }
+}
+
+.report-card {
+  @include flex(space-between, flex-start);
+
+  background: rgba($color-black, 0.5);
+  width: 100%;
+  height: 5.3125em;
+  margin-bottom: 1.5625em;
+  border-left: 0.625em solid $color-primary;
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  button {
+    border: 0.125rem solid $color-primary;
+    background: #1e1e1e;
+    outline: 0;
+    margin-top: 0.625rem;
+    margin-right: 0.6875rem;
+    font-weight: 800;
+    font-size: 1.0625rem;
+    padding: 0.3125rem 0.4375rem;
+  }
+
+  section {
+    @include flex(space-evenly, flex-start, column);
+    margin-left: 0.5em;
+    margin-top: 0.3125em;
+    font-weight: 800;
+
+    span {
+      color: $color-primary;
+    }
+
+    #title {
+      font-size: 1.25rem;
+      color: $color-primary;
+    }
+
+    #uid {
+      font-size: 0.9375rem;
+    }
+
+    #reason {
+      font-size: 0.75rem;
+    }
+
+    #reported-by {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.player-list {
+  margin-top: 1.125em;
+  width: 26.5em;
+}
+
+.player-slots {
+  margin-top: 1.75rem;
+
+  .side-menu-card {
+    @include flex(center, flex-start, column);
+
+    label {
+      &:first-child {
+        font-size: 1.5625rem;
+        margin-left: 0.6875rem;
+      }
+
+      &:last-child {
+        font-size: 0.9375rem;
+        margin-left: 0.6875rem;
+        margin-top: -0.3125rem;
+
+        span {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.player-info {
+  .side-menu-card {
+    @include flex(flex-start, center);
+    font-size: 1.5625rem;
+
+    label {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .player-info-card {
+    @include flex(space-evenly, flex-start, column);
+    font-weight: 800;
+    font-size: 1.15rem;
+    height: 7.5625rem;
+
+    h1 {
+      font-size: 2.1875rem;
+      margin-left: 0.5rem;
+    }
+
+    span {
+      color: $color-primary;
+    }
+  }
+}

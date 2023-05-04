@@ -1,0 +1,16 @@
+name: Rival NUI Deployment
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+        with:
+          build: npm run build

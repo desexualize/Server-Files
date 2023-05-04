@@ -1,0 +1,79 @@
+@import '~index';
+
+.clothing-panel {
+  @include flex(flex-start, center, column);
+
+  position: fixed;
+  top: 55%;
+  left: 35%;
+  width: 51.0625em;
+  height: 51.0625em;
+  transform: translate(-50%, -50%);
+}
+
+.clothing-container {
+  @include flex;
+}
+
+.clothing-container:not(:first-child):not(:last-child) {
+  .clothing-content {
+    margin-inline: calc(0.625em / 2);
+    margin-block: 0.625em;
+  }
+}
+
+.clothing-content {
+  @include flex(space-between, center, column);
+
+  transition: background 250ms ease;
+  background: rgba($color-black, 0.5);
+  width: 16.5625em;
+  height: 16.1875em;
+  animation: 750ms fade-in;
+
+  label {
+    color: $color-primary;
+    font-size: 1.5rem;
+    margin-top: 0.625em;
+  }
+
+  img {
+    width: 50%;
+    cursor: pointer;
+  }
+
+  section {
+    @include flex(space-between, center);
+
+    color: $color-primary;
+    width: 45%;
+    margin-bottom: 0.625rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    svg {
+      cursor: pointer;
+    }
+
+    svg:first-child {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:not(:first-child):not(:last-child) {
+    margin-inline: 0.625em;
+  }
+
+  &:hover {
+    background: rgba($color-black, 0.75);
+  }
+}
+
+.clothing-tool-tip {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-style: italic;
+}
