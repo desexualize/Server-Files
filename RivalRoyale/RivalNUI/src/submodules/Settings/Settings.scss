@@ -1,0 +1,235 @@
+@import '~index';
+
+.settings-banner {
+  @include flex(center, center);
+
+  width: 100%;
+  height: 6.25em;
+  margin-top: 2.1875em;
+  background: $color-bg;
+
+  img {
+    width: 4em;
+    height: 4em;
+  }
+
+  h1 {
+    margin-left: 1.6875rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: italic;
+  }
+}
+
+.settings-sections {
+  @include flex;
+
+  width: 85.55555%;
+  margin-top: 3.5em;
+
+  section {
+    text-align: center;
+    flex: 1;
+    font-size: 1.3125rem;
+    font-weight: 800;
+    padding-block: 0.9375rem;
+    background: rgba($color-black, 0.5);
+    border-bottom: 0.3125rem solid $color-primary;
+
+    &:not(:first-child):not(:last-child) {
+      margin-inline: 0.375em;
+    }
+  }
+
+  .active-section {
+    background: rgba($color-hovered, 0.5);
+  }
+}
+
+.settings-container {
+  width: 81.4814%;
+  margin: 1.4375rem 0rem 0.625rem 2.625rem;
+  font-size: 1.8125rem;
+  align-self: flex-start;
+}
+
+.settings-card-wrapper {
+  width: 100%;
+  overflow: auto;
+
+  &:not(:first-child, :last-child) {
+    margin-block: 0.625em;
+  }
+}
+
+.settings-card {
+  @include flex(space-between, center);
+
+  background: rgba($color-black, 0.5);
+  border-left: 0.375rem solid $color-primary;
+  width: 100%;
+  height: 3.4375rem;
+  margin-block: 0.375rem;
+
+  label {
+    font-size: 1.5625rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.settings-toggle-card {
+  .on {
+    color: $color-primary !important;
+  }
+
+  .settings-toggler {
+    @include center;
+
+    cursor: pointer;
+    height: 100%;
+    width: 17.04%;
+    font-size: 1.625rem;
+    font-weight: 800;
+    background-color: hsl(0, 0%, 19%);
+    color: hsl(0, 0%, 11%);
+    transition: 250ms background-color ease;
+
+    &:hover {
+      background-color: hsl(0, 0%, 15%);
+    }
+  }
+}
+
+.settings-slider {
+  display: block;
+
+  section {
+    @include flex(space-between, center);
+
+    label {
+      margin-top: 0.3125rem;
+    }
+
+    label:last-child {
+      margin-right: 0.875rem;
+    }
+  }
+
+  input[type='range'] {
+    position: absolute;
+    -webkit-appearance: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 76%;
+    height: 0.875em;
+    margin-left: 0.5em;
+
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 0.875em;
+      background: $color-bg;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 2.5em;
+      height: 2.5em;
+      box-shadow: -25.9375em 0 0 25.9375em $color-primary, inset 0 0 0 2.5em $color-primary;
+    }
+  }
+}
+
+.settings-btn-group {
+  @include flex(space-between, center);
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 81.4814%;
+}
+
+.save-button {
+  @include flex(center, center);
+
+  background: rgba($color-black, 0.5);
+  width: 12.1875rem;
+  padding-block: 0.75rem;
+  font-size: 1.625rem;
+  font-weight: 800;
+  border-bottom: 0.25rem solid $color-primary;
+
+  svg {
+    margin-left: 0.875rem;
+  }
+}
+
+.settings-key-card {
+  @include flex(space-between, center);
+
+  section {
+    @include hover-effect();
+    @include center;
+
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.875rem;
+
+    img {
+      width: 2.875rem;
+      height: 2.875rem;
+      object-fit: contain;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-black;
+      font-size: 1.56rem;
+    }
+  }
+
+  p {
+    color: $color-hovered;
+    font-size: 1.5625rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-right: 0.875rem;
+    letter-spacing: -1px;
+  }
+}
+
+.settings-reset-modal {
+  width: 22em !important;
+  background: rgba($color-black, 0.45);
+  padding: 2em;
+  padding-bottom: 1.5em;
+
+  h1 {
+    color: $color-primary;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-btn-group {
+    margin-top: 0.5em;
+
+    button {
+      @include hover-effect();
+
+      height: 2.1875rem;
+      width: 7.25rem;
+      font-size: 1.125rem;
+      font-weight: 800;
+      background: #1e1d1d;
+    }
+
+    button:last-child {
+      margin-left: 1.875rem;
+      color: #1e1d1d;
+      background: $color-primary;
+    }
+  }
+}

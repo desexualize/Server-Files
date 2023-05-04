@@ -1,0 +1,88 @@
+// Import needed stuff
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+@import 'animations';
+
+// Variables
+$color-primary: hsl(61, 100%, 76%);
+$color-bg: hsl(0, 0%, 9%);
+$color-black: hsl(0, 0%, 0%);
+$color-hovered: hsl(0, 0%, 55%);
+
+// Mixins
+@mixin flex($justify: flex-start, $align: flex-start, $direction: row) {
+  display: flex;
+
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin hover-effect() {
+  filter: brightness(100%);
+  transition: filter 0.5s ease;
+
+  &:hover {
+    filter: brightness(75%);
+  }
+}
+
+@mixin center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin backdrop-blur($amount: 0.5em) {
+  backdrop-filter: blur($amount);
+}
+
+// Default properties
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Inter';
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  cursor: url(https://i.imgur.com/yN6bjad.png), auto;
+}
+
+button,
+input,
+textarea {
+  border-style: none;
+  outline: 0;
+}
+
+h1,
+label,
+span {
+  font-weight: 800;
+}
+
+button {
+  cursor: pointer;
+}

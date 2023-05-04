@@ -1,0 +1,155 @@
+@import '~index';
+$color-death: #ff533a;
+
+.death-page-overlay {
+  background-color: rgba($color-black, 0.75);
+  width: 100vw;
+  height: 100vh;
+  animation: fade-in 250ms ease;
+}
+
+.death-page-container {
+  @include flex(flex-start, flex-start, column);
+  margin-left: 7em;
+}
+
+.death-page-top {
+  margin-top: 4.875em;
+  font-style: italic;
+
+  h1 {
+    color: $color-death;
+    font-size: 6.25rem;
+    text-shadow: -1px 0.1875rem 1.3125rem #ff0000;
+    animation: 250ms useSlideIn ease forwards;
+    transform: translateX(-125%);
+    line-height: 95.7%;
+  }
+
+  p {
+    font-size: 3.125rem;
+    font-weight: 800;
+  }
+
+  span {
+    color: $color-death;
+  }
+
+  label {
+    font-size: 2.5rem;
+  }
+}
+
+.death-page-stats {
+  @include flex(flex-start, flex-start, column);
+  margin-top: 5.8125em;
+  font-weight: 800;
+  font-style: italic;
+
+  label {
+    font-size: 1.875rem;
+  }
+
+  span {
+    color: $color-death;
+  }
+}
+
+.death-page-return-btn {
+  outline: none;
+  border: none;
+  font-style: italic;
+  font-size: 1.25rem;
+  border-left: 0.375rem solid $color-death;
+  background: rgba($color-black, 0.5);
+  padding: 0.8125rem 0.9375rem;
+  font-weight: 800;
+  position: fixed;
+  top: 2.6875rem;
+  left: 7rem;
+}
+
+.death-page-xp-bar {
+  @include flex(flex-start, flex-start, column);
+  margin-top: 26.5625em;
+  font-style: italic;
+
+  .death-page-level {
+    font-size: 3.75rem;
+
+    span {
+      color: $color-death;
+    }
+  }
+
+  p {
+    font-style: 1.25rem;
+    font-weight: 800;
+    color: $color-death;
+  }
+}
+
+.death-page-progress-bar {
+  width: 88.33vw;
+  height: 1.375em;
+  margin-top: 0.375em;
+  background: #353535;
+
+  div {
+    height: 100%;
+    transition: 250ms background-color linear;
+    background-color: $color-death;
+  }
+}
+
+.death-page-gained {
+  align-self: flex-end;
+  margin-top: -15em;
+  width: 31.0625em;
+
+  section {
+    @include flex(space-between, center);
+    font-size: 1.875rem;
+    font-style: italic;
+
+    label {
+      color: #6d6d6d;
+    }
+
+    span {
+      color: $color-death;
+    }
+  }
+
+  .total-xp {
+    margin-top: 0.3125rem;
+
+    label {
+      color: white !important;
+    }
+
+    span {
+      color: $color-death;
+    }
+  }
+}
+
+.death-page-challenges {
+  position: fixed;
+  right: 7.0625em;
+  top: 10.6875em;
+
+  .challenge-wrapper {
+    .challenge-section {
+      label {
+        color: $color-death !important;
+      }
+    }
+
+    .challenge-progress-bar {
+      div {
+        background: $color-death !important;
+      }
+    }
+  }
+}

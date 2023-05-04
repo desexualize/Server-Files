@@ -1,0 +1,84 @@
+@import '~index';
+
+.storage-selector {
+  @include flex;
+
+  position: absolute;
+  left: 50%;
+  bottom: 13.75em;
+  transform: translate(-50%);
+}
+
+.storage-card {
+  position: relative;
+  height: 37.5em;
+  width: 25em;
+  background: rgba($color-black, 0.5);
+  animation: 750ms fade-in ease;
+  transition: 250ms ease transform;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.storage-card-image {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.storage-card-character {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+
+.storage-card-bottom {
+  @include center;
+
+  position: absolute;
+  text-align: center;
+  background: rgba($color-black, 0.5);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3.75em;
+  z-index: 2;
+
+  label {
+    color: $color-primary;
+    font-weight: 900;
+    font-size: 1.875rem;
+  }
+}
+
+.armoury-card {
+  margin-right: 1.875em;
+
+  .storage-card-character {
+    width: 27.625em;
+    height: 43.4375em;
+  }
+
+  .storage-card-image {
+    width: 21.701875em;
+    height: 15.63125em;
+  }
+}
+
+.wardrobe-card {
+  margin-left: 1.875em;
+
+  .storage-card-character {
+    width: 34.125em;
+    height: 43.625em;
+    left: -2em;
+  }
+
+  .storage-card-image {
+    width: 21.701875em;
+    height: 15.63125em;
+  }
+}
