@@ -1,0 +1,91 @@
+<VCFROOT>
+	<EXTRAS>	
+		<Extra Number="1">
+			<Light OffsetX="-0.35" OffsetY="0.60" OffsetZ="0.80" Direction="330" Colour="blue" />
+			<Light OffsetX="-0.35" OffsetY="2.55" OffsetZ="0.10" Direction="350" Colour="blue" />
+			<Light OffsetX="0.35" OffsetY="2.55" OffsetZ="0.10" Direction="350" Colour="blue" />
+			<Light OffsetX="0.30" OffsetY="-2.00" OffsetZ="0.70" Direction="150" Colour="blue" />
+			<Light OffsetX="-0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="195" Colour="blue" />
+			<Light OffsetX="-0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="165" Colour="blue" />
+		</Extra>
+		<Extra Number="2">
+			<Light OffsetX="1.00" OffsetY="0.70" OffsetZ="0.50" Direction="40" Colour="blue" />
+		</Extra>
+		<Extra Number="3">
+			<Light OffsetX="0.35" OffsetY="0.60" OffsetZ="0.80" Direction="30" Colour="blue" />
+			<Light OffsetX="0.25" OffsetY="2.55" OffsetZ="0.10" Direction="10" Colour="blue" />
+			<Light OffsetX="-0.25" OffsetY="2.55" OffsetZ="0.10" Direction="10" Colour="blue" />
+			<Light OffsetX="-0.30" OffsetY="-2.00" OffsetZ="0.70" Direction="210" Colour="blue" />
+			<Light OffsetX="0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="165" Colour="blue" />
+			<Light OffsetX="0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="195" Colour="blue" />
+			<Light OffsetX="-0.25" OffsetY="2.55" OffsetZ="-0.20" Direction="0" Colour="blue" />
+			<Light OffsetX="0.25" OffsetY="2.55" OffsetZ="-0.20" Direction="0" Colour="blue" />
+		</Extra>
+		<Extra Number="4">
+			<Light OffsetX="-1.00" OffsetY="0.70" OffsetZ="0.50" Direction="320" Colour="blue" />
+		</Extra>
+		<Extra Number="5">
+
+		</Extra>
+		<Extra Number="6">
+
+		</Extra>
+		<Extra Number="7">
+			<Light OffsetX="-0.20" OffsetY="-2.00" OffsetZ="0.70" Direction="170" Colour="red" />
+			<Light OffsetX="-0.20" OffsetY="-2.00" OffsetZ="0.70" Direction="200" Colour="red" />
+		</Extra>
+		<Extra Number="9">
+			<Light OffsetX="-0.20" OffsetY="-2.00" OffsetZ="0.70" Direction="190" Colour="red" />
+			<Light OffsetX="-0.20" OffsetY="-2.00" OffsetZ="0.70" Direction="160" Colour="red" />
+		</Extra>
+		<Extra Number="8">
+			<Light OffsetX="-0.35" OffsetY="0.60" OffsetZ="0.80" Direction="330" Colour="amber" />
+			<Light OffsetX="-0.35" OffsetY="2.55" OffsetZ="0.10" Direction="350" Colour="amber" />
+			<Light OffsetX="0.35" OffsetY="2.55" OffsetZ="0.10" Direction="350" Colour="amber" />
+			<Light OffsetX="0.30" OffsetY="-2.00" OffsetZ="0.70" Direction="150" Colour="amber" />
+			<Light OffsetX="-0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="195" Colour="amber" />
+			<Light OffsetX="-0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="165" Colour="amber" />
+		</Extra>
+		<Extra Number="10">
+			<Light OffsetX="0.35" OffsetY="0.60" OffsetZ="0.80" Direction="30" Colour="amber" />
+			<Light OffsetX="0.25" OffsetY="2.55" OffsetZ="0.10" Direction="10" Colour="amber" />
+			<Light OffsetX="-0.25" OffsetY="2.55" OffsetZ="0.10" Direction="10" Colour="amber" />
+			<Light OffsetX="-0.30" OffsetY="-2.00" OffsetZ="0.70" Direction="210" Colour="amber" />
+			<Light OffsetX="0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="165" Colour="amber" />
+			<Light OffsetX="0.45" OffsetY="-2.50" OffsetZ="0.30" Direction="195" Colour="amber" />
+			<Light OffsetX="-0.25" OffsetY="2.55" OffsetZ="-0.20" Direction="0" Colour="amber" />
+			<Light OffsetX="0.25" OffsetY="2.55" OffsetZ="-0.20" Direction="0" Colour="amber" />
+		</Extra>
+	</EXTRAS>
+	<SOUNDS>
+		<MainHorn AudioString="siren_met1_bullhorn" />
+		<SrnTone1 AudioString="siren_met1_wail" />
+		<SrnTone2 AudioString="siren_met1_yelp" />
+		<SrnTone3 AudioString="siren_met1_phaser" />
+		<SrnTone4 AudioString="siren_met1_hilo" />
+	</SOUNDS>
+	<PATTERNS>
+        <Primary>
+            <Pattern Duration="100" Extras="1, 2" />
+            <Pattern Duration="100" Extras="" />
+            <Pattern Duration="100" Extras="1, 2" />
+            <Pattern Duration="100" Extras="3, 4" />
+            <Pattern Duration="100" Extras="" />
+            <Pattern Duration="100" Extras="3, 4" />
+        </Primary>
+        <Secondary>
+            <Pattern Duration="120" Extras="6,9" />
+            <Pattern Duration="120" Extras="" />
+            <Pattern Duration="120" Extras="7,5" />
+            <Pattern Duration="120" Extras="" />
+        </Secondary>
+        <Warning>
+            <Pattern Duration="100" Extras="8" />
+            <Pattern Duration="100" Extras="" />
+            <Pattern Duration="100" Extras="8" />
+            <Pattern Duration="100" Extras="10" />
+            <Pattern Duration="100" Extras="" />
+            <Pattern Duration="100" Extras="10" />
+        </Warning>
+    </PATTERNS>
+</VCFROOT>

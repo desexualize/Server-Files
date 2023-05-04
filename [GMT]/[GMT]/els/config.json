@@ -1,0 +1,35 @@
+{
+	"Keyboard":
+	{
+		"ModifyKey": 132,
+		"StageChange": 85,
+		"Bullhorn": 86,
+		"Siren":
+		{
+			"ToneOne": 157,
+			"ToneTwo": 158,
+			"ToneThree": 160,
+			"ToneFour": 164
+		},
+		"Pattern":
+		{
+			"Primary": 161,
+			"Secondary": 162,
+			"Warning": 163
+		},
+		"IndicatorLeft": 174,
+		"IndicatorRight": 175
+	},
+	"Controller":
+	{
+		"ModifyKey": 73,
+		"StageChange": 80,
+		"Bullhorn": 86,
+		"Siren":
+		{
+			"ToneOne": 173,
+			"ToneTwo": 85,
+			"ToneThree": 172
+		}
+	}
+}

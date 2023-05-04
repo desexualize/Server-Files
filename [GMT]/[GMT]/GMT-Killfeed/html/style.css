@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "stratum2_bdbold";
+    src: url("stratum2-bold-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.killContainer {
+    width: auto !important;
+    height: 32px;
+    float: right;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.50);
+    color: #FFF;
+    font-family: 'stratum2_bdbold', monospace;
+    line-height: 18px;
+    font-size: 140% !important;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: middle;
+    display: inline;
+    vertical-align: top;
+    /*border: 2px solid rgb(0, 0, 0);*/
+    transition: padding-top 1s;
+}
+
+.killContainerOwn {
+    width: auto !important;
+    height: 32px;
+    float: right;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.50);
+    color: #FFF;
+    font-family: 'stratum2_bdbold', monospace;
+    line-height: 18px;
+    font-size: 140% !important;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: middle;
+    display: inline;
+    vertical-align: top;
+    border: 2px solid rgb(240, 47, 47);
+    transition: padding-top 1s;
+}
+
+
+.weapon {
+    height: 20px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.killer {
+    color: #fc3838;
+}
+
+.killed {
+    color: #fc3838;
+}
+
+.pd {
+    color: #4F9EDE;
+}
+
+.nhs {
+    color: #00D100;
+}
+
+.distance {
+    color: rgb(255, 255, 255);
+}
+
+.clear {
+    clear:both
+}

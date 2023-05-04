@@ -1,0 +1,48 @@
+-- local rewardjew = math.random(1,3)
+-- local minCops = 3
+-- local players = GetPlayers()
+
+-- RegisterServerEvent("jewelryrobberry:serverstart")
+-- AddEventHandler("jewelryrobberry:serverstart", function()
+--     local user_id = vRP.getUserId({source})
+--     local player = vRP.getUserSource({user_id})
+--     local cops = vRP.getUsersByPermission({"police.armoury"})
+--     if vRP.hasPermission({user_id,"police.armoury"}) then
+--         vRPclient.notify(player,{"~r~Cops can't rob the jewellery store."})
+--     else
+--         if #cops >= minCops then
+--             TriggerClientEvent("jewelryrobberry:start", source)
+--         else
+--             vRPclient.notify(player,{'~r~Minimum of '..minCops..' cops online.'})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('jewelryrobberry:sucess')
+-- AddEventHandler('jewelryrobberry:sucess', function()
+--     local user_id = vRP.getUserId({source})
+--     if user_id ~= nil then
+--         vRP.giveInventoryItem({user_id,"jewellery",rewardjew,true})
+--     end
+-- end)
+
+-- RegisterServerEvent('jewelryrobberry:sucessRW1')
+-- AddEventHandler('jewelryrobberry:sucessRW1', function()
+--     local user_id = vRP.getUserId({source})
+--     if user_id ~= nil then
+--         vRP.giveInventoryItem({user_id,"jewellery",1,true})
+--     end
+-- end)
+
+-- RegisterServerEvent('jewelryrobberry:allarmpolice')
+-- AddEventHandler('jewelryrobberry:allarmpolice', function()
+--     for i,v in pairs(players) do
+--         local user_id = vRP.getUserId({v})
+--         local source = vRP.getUserSource({user_id})
+--         if user_id ~= nil then
+--           if vRP.hasPermission({user_id, "police.armoury"}) then
+--             TriggerClientEvent("GMT:setJewelleryBlip", source)
+--           end
+--         end
+--     end
+-- end)
