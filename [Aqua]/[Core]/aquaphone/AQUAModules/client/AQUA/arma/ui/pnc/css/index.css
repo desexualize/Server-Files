@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* Colours:
+Yellow: #f3bd29
+Blue: #09182c */
+@font-face{
+    src: url(../fonts/modes.ttf);
+    font-family: modes;
+}
+
+body {
+    background: none !important;
+
+}
+#line1{
+
+    margin-top: 134px;
+}
+
+#pnccontainer {
+    font-size: 14px;
+    padding: 25px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://cdn.discordapp.com/attachments/925933277854961684/1017186947925561446/pnc.png?size=4096) center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    overflow-x: hidden;
+    display: none;
+    height: 820px;
+    width: 1500px;
+    font-family: 'Roboto', sans-serif !important;
+    /* opacity: 0.5%; */
+}
+
+#loggedinas {
+    position: fixed;
+    top: 13.5%;
+    left: 92.5%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+#title {
+
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    font-size: 14px;
+}
+
+.recentpolnews{
+    margin-top:  10px;
+}
+
+#wTitle {
+    position: fixed;
+    top: 57%;
+    left: 60%;
+    font-size: 14px;
+}
+/* #personsearchform{
+    width: 400px;
+    height: auto;
+    position: fixed;
+    left: 7%;
+    top: 25%
+} */
+
+.firstname, .lastname, .plate{
+    width: 400px;
+    height: 25px;
+    background-color: transparent;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    border-style: solid;
+    padding-left: 4px;
+    margin-bottom: 6px;
+}
+
+.ownerinfotitle{
+    position: fixed;
+    right:20%;
+    margin-top: 5px
+}
+
+.ownerinfo{
+    position: fixed;
+    left: 60%;
+    top: 25%
+}
+
+#taxDisc{
+    position: fixed;
+    right:10%;
+    top:50%;
+
+}
+
+#selfines{
+    color: white;
+    font-family: Roboto;
+}
+
+
+#results:active, #results:focus{
+    background: transparent;
+    outline: none;
+}
+#searchP{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    border-style: solid;
+    margin-top: 5px;
+}
+#searchP:hover{
+    color: black;
+    background-color: white;
+}
+.modes {
+    font-family: modes !important;
+}
+
+.hover-me:hover{
+    color: rgb(158, 157, 157) !important;
+}
+
+
+/* News Cards */
+
+.news-card{
+    width: 700px;
+    height: auto;
+    /* background-color: white; */
+    border: white;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 6px;
+}
+.newsbody{
+    margin-left: 6px;
+}
+
+.inlinep, .inlineh3{
+    display: inline;
+    vertical-align: top;
+    line-height: 28px;
+
+}
+.newsdesc{
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.newsheader{
+    color: white;
+}
+
+/* Buttons */
+
+.button {
+    font-size: 20px;
+    border: none;
+    height: 35px;
+    /* width: auto; */
+    background-color: transparent;
+    /* text-align: center; */
+    /* line-height: 15px; */
+    margin-left: 1px;
+    margin-bottom: 10px;
+    color: white;
+    /* border-radius: 25px; */
+    /* padding: 10px 24px; */
+    cursor: pointer;
+}
+.spacerbtn{
+    color: #fff;
+    background-color: transparent;
+    width: auto;
+    font-size: 20px;
+    border: none;
+    margin-left: 1px;
+}
+.button:hover{
+    color: white;
+}
+
+.navbuttonspnc {
+    position: fixed;
+    font-size: 20px;
+    /* padding: 12px; */
+    border: none;
+    position: fixed;
+    top: 15%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    /* float: left; */
+}
+#userbuttons {
+    position: fixed;
+    font-size: 20px;
+    padding: 12px;
+    border: none;
+    position: fixed;
+    top: 23%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+.searchPersonsBtn{
+    background-color:transparent; 
+    border: white; 
+    border-width: 1px;
+    border-style: solid;
+    color: white; 
+    width: 100%;
+    display: block; 
+    height: 25px;
+}
+.searchPersonsBtn:hover, .resultActive{
+    background-color: white ;
+    color: #000;
+}
+.personResults{
+    position: fixed;
+    right: 36%;
+    top: 20%;
+    padding-left: 0px;
+    width: 34%;
+}
+.searchInfo{
+    position: fixed;
+    top: 40%;
+}
+
+.personNav{
+    color: white
+}
+.navp:hover{
+    color: rgb(158, 157, 157)
+}
+
+/* Notes */
+
+#notes{
+    width: 400px;
+    background-color: transparent;
+    position: fixed;
+    top: 40%;
+    left: 20%;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+}
+
+#noteinput{
+    top: 60%;
+    left:20%;
+    position: fixed;
+    width: 320px;
+}
+
+#addnote{
+    position: fixed;
+    top: 60%;
+    left: 43%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: white;
+
+}
+#addnote:hover{
+    background: #b38509;
+}
+#note{
+    height: auto !important;
+    background-color: white !important;
+    color: white !important;
+    margin-bottom: 3px;
+    width: 395px;
+}
+button:active, button:focus {
+    outline: none;
+}
+
+
+
+/* new fine system */
+#finesdiv{
+    position: fixed;
+    top: 25%
+}
+#finebtn{
+    background: transparent;
+    /* background-color: white; */
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin-bottom: 10px;
+    height: 25px;
+    display: block;
+    width: 300px;
+}
+#subfinebtn{
+    background: transparent;
+    /* background-color: white; */
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin-bottom: 10px;
+    height: 25px;
+    display: block;
+    width: 300px;
+
+}
+#subfinesdiv{
+    position: fixed;
+    left: 25%;
+    top: 25%
+}
+
+#finebtn:hover, #subfinebtn:hover{
+    background-color: white;
+    color: black;
+}
+#newFineInfo{
+    position: fixed !important;
+     left: 60% !important;
+     
+    /* top: 20%; */ 
+}
+
+.oldfinediv{
+    background-color: transparent;
+    border: white;
+    border-style: solid;
+    border-width: 1px;
+    height: auto;
+    width: 400px;
+    margin-bottom: 10px;
+}
+.oldfinediv:hover{
+    background-color: white;
+    color: black;
+}
+.finesinfo{
+    position: fixed;
+    top: 25%;
+    left: 60%;
+}
+
+/* Clock */
+
+#clock{
+    position: fixed;
+    left: 90%;
+    top: 2.5%;
+}
+
+
+
+/* Misc Styles */
+
+.noliststyle{
+    list-style: none;
+}
+
+.redhover:hover{
+    color: red;
+}
+
+.specialinput{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.5px;
+    padding-left: 3px;
+    border-color: #fff;
+    color: #fff;
+    height: 25px;
+}
+.specialbutton{
+    background-color:transparent; 
+    border: white; 
+    border-width: 1px;
+    border-style: solid;
+    color: white; 
+    width: 40vh;
+    display: block; 
+    height: 25px;
+}
+
+.specialbutton:hover{
+    color:black;
+    background-color: white;
+}
+
+/* Attention Drawn */
+
+#ad{
+    position: fixed;
+    top: 20%;
+}
+
+.ad-table{
+    position: fixed;
+    top: 20%;
+    left:40%;
+}
+
+#adbox{
+    width: 400px;
+    background-color: transparent;
+    border: none;
+    overflow-x: hidden !important;
+}
+
+#adbox:active{
+    outline: hidden;
+    outline: none;
+}
+
+#adoption{
+    color: white;
+}
+
+#adoption:active{
+    outline: hidden;
+    outline: none;
+}
+.personNotesTitles{
+    position: fixed;
+    right:26%;
+}
+.personNotes{
+    position: fixed;
+    right:5%;
+    width: 39.5vh;
+}
+.personNotesSaveButton{
+    position: fixed;
+    right:5%;
+    top: 57%
+}
+
+.personHouses{
+    position: fixed;
+    right:5%;
+    top: 45%;;
+    /* width: 39.5vh; */
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    width: 39.5vh;
+}
+
+.personHouses:focus{
+    border: none;
+}
+
+.playerVehicles{
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    width: 39.5vh;
+}
+
+/* Plate Search */
+
+.vehicleNotes{
+    width: 39.5vh;
+}
+
+
+.warning-marker-reason{
+    width: 400px;
+    height: 25px;
+    background-color: transparent;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    border-style: solid;
+    padding-left: 4px;
+    margin-bottom: 6px;
+}
+
+.option option{
+    background: black !important;
+    color: none;
+}
+
+
+.attention-draw-type{
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.attention-draw-type option{
+    background: black;
+}
+
+
+.attention-drawn{
+    /* width: 39.5vh; */
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    width: 50%;
+}
+
+.attention-drawn:focus{
+    border: none;
+}
+
+.ad-row:hover{
+    color: red;
+}
+
+.active{
+    color: red
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <!-- <script src="./tubeplayer.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-tubeplayer/2.1.0/jquery.tubeplayer.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="Menu.js" type="text/javascript"></script>
+    <script src="ProgressBar.js" type="text/javascript"></script>
+    <script src="WPrompt.js" type="text/javascript"></script>
+    <script src="RequestManager.js" type="text/javascript"></script>
+    <script src="AnnounceManager.js" type="text/javascript"></script>
+    <script src="Div.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <link href="design.css" rel="stylesheet" type="text/css" />
+    <script src="ogrp.menu.js" type="text/javascript"></script>
+    <script src="ogrp.main.js" type="text/javascript"></script>
+    <script src="newphone.js" type="text/javascript"></script>
+    <link href="ogrp.menu.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  -->
+    <link href="main.css" rel="stylesheet"></script>
+    <link rel="stylesheet" type="text/css" href="pnc/css/index.css">
+    <link rel="stylesheet" type="text/css" href="pnc/css/modal.css">
+    <!-- Notify System -->
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="fingerprintHacking/style.css" />
+    <script src="fingerprintHacking/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./progress/css/index.css" type="text/css" />
+
+
+    <!-- MDBootstrap Datatables  -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<!-- Bootstrap core CSS -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/16b0bdd294.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script src="index.js" type="text/javascript"></script> -->
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="./SoundManager.js"></script>
+</head>
+
+<body>
+    <div class="progress-container">
+        <div id="rprogress"></div>
+    </div>
+    <img id="img" src="fingerprintHacking/blank.png" alt=""/>
+    <div class="headbag" style="display:none;">
+        <img src="https://i.imgur.com/pZnhZYm.jpg">
+    </div>
+    <div id=playerlist style="display:none">
+        <div id="playerlist_header">
+            <img src="arma.png" align="top" width="20px" ,height="20px"><span class="staff">100</span>
+            <img src="nhs.jpg" align="top" width="20" ,height="20"><span class="nhs">100</span>
+            <img src="met.png" align="top" width="24" ,height="24"><span class="police">100</span>
+            <img src="lfb.png" align="top" width="24" ,height="24"><span class="lfb">100</span>
+            <img src="danny.png" align="top" width="20" ,height="20"><span class="aa">100</span>
+        </div>
+        <div id="playerlist_columns">
+            <span class="playerlist_header">Username</span><span class="playerlist_header">Profession</span><span
+            class="playerlist_header">Playtime</span>
+        </div>
+        <div class="playerlist_content"></div>
+        <div id="playerlist_footer">
+            <span class="foot">Server #1 | </span>
+            <span class="foot" style="color: rgb(0, 255, 20);">Server uptime 1hr30mins</span>
+            <span class="foot"> | Number of players 20/100 (Queue: 4)</span>
+        </div>
+    </div>
+
+  <!-- Start PNC -->
+  <div id="pnccontainer">
+    <p id="clock">{{clock}}</p>
+    <div class="navbuttonspnc">
+        <button class="button hover-me" v-on:click="switchPage('main')">Home</button>
+        <button class="spacerbtn">|</button>
+        <button class="button hover-me"  v-on:click="switchPage('personsearch')">Person Search</button>
+        <button class="spacerbtn">|</button>
+        <button class="button hover-me" id="platesearch" v-on:click="switchPage('platesearch')">Plate Search</button>
+        <button class="spacerbtn">|</button>
+        <button class="button hover-me" id="gcbtn" v-if="goldcommand == true" v-on:click="switchPage('gc')">Gold Command</button>
+    </div>
+
+    <main-page></main-page>
+    <person-lookup></person-lookup>
+    <h2 id="loggedinas">Welcome, ID: {{officer.id}}</h2>
+
+
+<div v-if="page == 'new-fines'">
+    <h1>FINES</h1>
+    <!-- <person-search-nav/> -->
+    <div class="personNav" style="position: fixed; top: 20%;">
+        <p class="inlinep yellow">|</p>
+        <p class="inlinep navp" v-on:click="switchPage('personsearch')">Home </p>
+        <p class="inlinep yellow">|</p>
+        <p class="inlinep navp" v-on:click="switchPage('new-fines')">New Fine </p>
+        <p class="inlinep yellow">|</p>
+        <p class="inlinep navp" v-on:click="switchPage('dvsa')">DVSA</p>
+    </div>
+    <div id="finesdiv">
+        <button v-for="(fine,index) in fines" :key="index" style="margin-left: 4px;" v-on:click="selectFine(fine)" id="finebtn">{{fine.title}}</button><br>
+    </div>
+    <br>
+    <div id="subfinesdiv">
+        <button v-for="sFine in selectedfine.subfines" style="margin-left: 4px;" v-on:click="addFine(sFine)" id="subfinebtn">{{sFine.main}}</button>
+    </div>
+    <div id="newFineInfo" style="position: fixed; top: 30%;">
+        <p>Person:</p>
+        <input type="text" class="specialinput"readonly :value="selectedPerson.firstname">
+        <input type="text" class="specialinput"readonly :value="selectedPerson.lastname">
+        <h4 style="margin-bottom: 10px;">Charges:</h4>
+        <ul class="noliststyle">
+            <li v-for="(fine, index) in newFine.fines" class="redhover" v-on:click="removeFine(index)" aria-label="Click to remove">{{fine.fine}} - {{formatter.format(fine.amount)}}</li>
+        </ul>
+        <p for="officerNotes">Officer Notes:</p>
+        <textarea id="officerNotes" v-model="newFine.notes" style="width: 400px; height: 75px;"></textarea><br>
+        <label for="amount">Fine Amount:</label>
+        <input type="number" class="specialinput" placeholder="Fine Amount" id="amount" v-model="newFine.amount">
+        <p>Please remember, if the person you are fining is a new player please<br> aim for the lower amount.</p>
+        <button class="specialbutton" v-on:click="submitFine()">Submit Fine</button>
+        <h4>{{finePageMsg}}</h4>
+    </div>
+</div>
+<div v-if="page == 'oldfines'">
+    <h1 class="modes ownerinfotitle" >FINE INFORMATION</h1>
+    <div class="finesinfo" style="padding: 4px;">
+        <p class="modes" style="margin-bottom: 10px;" >Issued By: {{selectedOldFine.officer_name}} ID:{{selectedOldFine.officer_id}}</p>
+        <p class="modes" style="margin-bottom: 10px;">Amount: {{formatter.format(selectedOldFine.amount)}}</p>
+        <p class="modes" style="margin-bottom: 10px;">Charges:</p>
+        <p v-for="f in selectedOldFine.charges">{{f.fine}}</p>
+        <p class="modes" style="margin-bottom: 10px;">Notes:</p>
+        <p class="modes">{{selectedOldFine.notes}}</p>
+    </div>
+    <div class="personNav">
+        <p class="inlinep yellow">|</p>
+        <p class="inlinep navp" v-on:click="switchPage('personsearch')">Home </p>
+        <p class="inlinep yellow">|</p>
+        <p class="inlinep navp" v-on:click="switchPage('new-fines')">New Fine </p>
+        <p class="inlinep yellow">|</p>
+        <p class="inlinep navp" v-on:click="switchPage('dvsa')">DVSA</p>
+    </div>
+    <div v-for="fine in selectedPerson.otherprevs" v-on:click="selectOldFine(fine)"class="oldfinediv"><p v-for="f in JSON.parse(fine.description)">{{f.fine}}</p></div>
+</div>
+    <div v-if="page == 'platesearch'" style="position: fixed; top: 20%;">
+        <!-- <p class="modes">Coming in the garagesv2 update!</p> -->
+        <h1 class="modes ownerinfotitle" >OWNER INFORMATION</h1>
+        <div class="ownerinfo">
+            <p class="modes" style="margin-bottom: 20px;">National Insurance Number: {{searchedVehicle.owner.user_id}}</p>
+            <p class="modes" style="margin-bottom: 20px;">Firstname: {{searchedVehicle.owner.firstname}}</p>
+            <p class="modes" style="margin-bottom: 20px;">Lastname: {{searchedVehicle.owner.lastname}}</p>
+            <p class="modes" style="margin-bottom: 20px;">Age: {{searchedVehicle.owner.age}}</p>
+        </div>
+
+
+            <input v-on:keypress="plateSearchErr = ''"v-model="plate" type="text" class="plate"placeholder="Enter Plate to search" required>
+            <button class="searchbutton" id="searchP" v-on:click="searchPlate()">Search</button>
+            <p>{{plateSearchErr}}</p>
+            <p class="modes" style="margin-bottom: 20px;">Vehicle Model: {{searchedVehicle.name}}</p>
+            <!-- <p class="modes" style="margin-bottom: 20px;">Colour: {{searchedVehicle.colour}}</p> -->
+            <p class="modes" style="margin-bottom: 20px;">Plate: {{searchedVehicle.plate}}</p>
+            <img v-if="!searchedVehicle.owner.user_id == ''" :src="getTaxDisc(searchedVehicle.name, searchedVehicle.plate, searchedVehicle.owner.user_id)" alt="" height="350px" width="350px" id="taxDisc">
+            <p v-if="!searchedVehicle.owner.user_id == ''">Vehicle Notes:</p>
+            <textarea v-if="!searchedVehicle.owner.user_id == ''" name="" id="" cols="30" rows="10" id="vehicleNotes" class="vehicleNotes" v-model="searchedVehicle.notes"></textarea><br>
+            <button v-if="!searchedVehicle.owner.user_id == ''"class="specialbutton"  v-on:click="saveNotes()">Save</button><br>
+            <p class="modes">{{vehicleSearchSavedNotifaction}}</p>
+            <img :src="getPlateImage(searchedVehicle.plate)" alt="" width="439" height="227.5">
+    </div>
+    <div v-if="page == 'gc'" style="top: 20%; position: fixed;">
+        <button class="searchbutton" id="searchP" style="margin-bottom: 2%;"v-on:click="GetWarrant()">Get Warrant</button><br/>
+        <input v-on:keypress="plateSearchErr = ''"v-model="enteredAccessCode" type="text" class="plate"placeholder="Enter Gold Command Access Code" required>
+        <button class="specialbutton" v-on:click="wipeAllMarkers">Wipe All Markers</button>
+        <p>{{plateSearchErr}}</p>
+    </div>
+    <div v-if="page == 'dvsa'" style="top: 20%; position: fixed;">
+        <div class="personNav">
+            <p class="inlinep yellow">|</p>
+            <p class="inlinep navp" v-on:click="switchPage('personsearch')">Home </p>
+            <p class="inlinep yellow">|</p>
+            <p class="inlinep navp" v-on:click="switchPage('new-fines')">New Fine </p>
+            <p class="inlinep yellow">|</p>
+            <p class="inlinep navp" v-on:click="switchPage('dvsa')">DVSA</p>
+        </div>
+            <div id="finesdiv">
+                <button v-for="(point,index) in points" :key="index" style="margin-left: 4px;" v-on:click="selectPoint(point)"id="finebtn">{{point.name}}</button><br>
+            </div>
+                <div id="newFineInfo">
+                    <p>Person:</p>
+                    <input type="text" class="specialinput" readonly :value="selectedPerson.firstname">
+                    <input type="text" class="specialinput" readonly :value="selectedPerson.lastname">
+                    <h4 style="margin-bottom: 10px;">Points:</h4>
+                    <ul class="noliststyle">
+                        <li v-for="(point, index) in selectedpoints" class="redhover" v-on:click="removePoint(index)"
+                            aria-label="Click to remove">{{point.name}} - {{point.points}} points</li>
+                    </ul>
+                    <button class="specialbutton" v-on:click="addPoint()">Add Points</button>
+                    <h4>{{finePageMsg}}</h4>
+                </div>
+    </div>
+</div>
+    <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
+    <script src="https://www.youtube.com/player_api"></script>
+    <!-- <script src="./js/vue.min.js"></script> -->
+    <script
+    src = "https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity = "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin = "anonymous"></script>
+    <script src="./pnc/components/main.page.js" type="text/javascript"></script>
+    <script src="./pnc/components/nav.component.js" type="text/javascript"></script>
+    <script src="./pnc/components/personlookup.page.js" type="text/javascript"></script>
+    <script src="./pnc/js/fine_types.js"></script>
+    <script src="./pnc/js/index.js" type="text/javascript"></script>
+    <script src="./pnc/js/modals.js" type="text/javascript"></script>
+    <script src="./pnc/js/fine_loader.js" type="text/javascript"></script>
+    <script src="./pnc/js/notes.js" type="text/javascript"></script>
+    <!-- End PNC -->
+
+    <!-- Start CCTV -->
+    <div id="Camera_Container">
+        <div id="Camera_Label"></div>
+        <div id="Camera_Label2"></div>
+    </div>
+    <!-- End CCTV -->
+
+    <script src="index.js" type="text/javascript"></script>
+
+    <!-- Warning System -->
+    <div id="warningscontainer">
+        <div id="warningHeader">
+            <h1 class="text-center text-white" style="padding-top: 20px;">ARMA Warning System</h1>
+        </div>
+        <div class="container">
+            <br><br>
+            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="table mb-0">
+                    <thead>
+                        <tr>
+                            <th class="text-left" scope="col">ID</th>
+                            <th class="text-left" scope="col">Date</th>
+                            <th class="text-left" scope="col">Duration</th>
+                            <th class="text-left" scope="col">Points</th>
+                            <th class="text-left" scope="col">Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody id="warningstablebody">
+                    </tbody>
+                </table>
+            </div>
+            <h2 class="text-center" id="points">0</h2>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Kill Feed -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rsuite/4.8.9/rsuite.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="killfeed/style.css">
+
+    <div id="killfeed"></div>
+    <script src="killfeed/index.js"></script>
+    <script src="progress/rprogress.js"></script>
+    <!-- End Kill Feed-->
+
+    <!-- Start Radios -->
+    <link rel="stylesheet" href="radios/index.css">
+    <div class="radio-list-container" id="radio-list"></div>
+    <script src="radios/index.js"></script>
+    <!-- End Radios -->
+</body>
+
+</html>

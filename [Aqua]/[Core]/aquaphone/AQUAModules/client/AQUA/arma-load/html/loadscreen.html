@@ -1,0 +1,150 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UDM | Loadingscreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="loadscreen.css">
+    <link href="snow.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="overcast"></div>
+    <div class="progress"></div>
+    <!-- valentines  -->
+    <!-- <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+    </div> -->
+
+    <!-- xmas  -->
+    <!-- <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+    </div> -->
+
+    <!-- halloween  -->
+    <!-- <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+    </div> -->
+    
+<div class="anim">
+    <img src=https://i.imgur.com/3AhCoAI.png>
+</div>
+
+    <audio id="leson" src="music.mp3" autoplay="false" hidden="true" loop="true"/>
+    
+    <script>
+
+    var play = false;
+    var myAudio = document.getElementById("leson");
+    
+    myAudio.volume = 0.4;
+
+    function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+      return false;
+    }
+
+    window.addEventListener("keydown", onKeyDown, false);
+    </script>
+
+
+</body>
+</html>

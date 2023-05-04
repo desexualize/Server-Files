@@ -1,0 +1,37 @@
+<html>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <body>
+        <video autoplay muted loop id="video">
+            <source src="video.mp4" type="video/mp4" width=1920 height=1080>
+        </video>
+    </body>
+    <audio id="song" autoplay loop>
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+    <script>
+    var vid = document.getElementById("song");
+    vid.volume = 1
+    </script>
+    </html>
+    
+    <script>
+    var counter=0;
+    document.getElementById("song").volume = 0.3;
+    document.body.onkeyup = function(e){
+        console.log('Loading screen: key pressed: ' + e.keyCode)
+        if(counter == 0){
+            if(e.keyCode == 32){
+                console.log('Pause the song!')
+                document.getElementById("song").pause();
+                counter = 1;
+            }
+        }else{
+            if(e.keyCode == 32){
+                document.getElementById("song").play();
+                counter = 0;
+            }
+        }
+    }
+    </script>
+
+</html>

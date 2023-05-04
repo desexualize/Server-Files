@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html, body { 
+    height: 100%;
+    width: 100%; 
+    margin: 0; 
+    overflow:hidden ;
+    background: none !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* div{
+    width:100%;
+} */
+
+#playerlist {
+  transform: translateZ(0);
+}
+
+#playerlist_columns span{
+    display:inline-block;    
+    width:10%;
+    text-align:center;
+}
+
+#playerlist_header {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background: rgba(18,82,228,0.8);
+    text-align:center;
+    font-weight: bold; 
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#playerlist_footer {
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(18,82,228,0.8);
+    text-align:center;
+    font-size: 0.9em;
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-bottom: 5%;
+}
+
+#playerlist_columns {
+    width: 50%;
+    margin: 0 auto;
+    background: rgb(34, 35, 36);
+    text-align:center;
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#playerlist_columns span {
+    padding-left:75px;
+    padding-right:75px;
+}
+
+#playerlist_columns .playerlist_header{
+    color: white;
+}
+
+.playerlist_content {
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    text-align:center;
+    max-height: 600px;
+    overflow:auto;
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.playerlist_content span {
+    padding-left:75px;
+    padding-right:75px;
+    color: white;
+    display:inline-block;    
+    width:10%;
+    text-align:center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#playerlist_header img {
+    vertical-align:middle;
+    display:inline-block;
+    margin:5px 1px;
+    padding:5px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgrey;
+}
+
+#playerlist_seperator_staff {
+    background-color: rgba(34, 35, 36,0.5);
+    display: table-cell;
+}
+
+#playerlist_seperator_police {
+    background-color: rgba(4, 48, 190,0.5);
+    display: table-cell;
+}
+
+#playerlist_seperator_hmp {
+    background-color: rgba(40, 48, 190,0.5);
+    display: table-cell;
+}
+
+#playerlist_seperator_nhs {
+    background-color: rgba(15, 143, 21,0.5);
+    display: table-cell;
+}
+
+#playerlist_seperator_lfb {
+    background-color: rgba(255, 43, 21,0.5);
+    display: table-cell;
+}
+
+#playerlist_seperator_civs {
+    background-color: rgba(185, 30, 30,0.5);
+    display: table-cell;
+}
+
+#arthurtestclick:hover{
+    background-color: rgba(185, 30, 30,0.5);
+}
+
+.headbag img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Start Notify System */
+#notif{
+    /* position:relative;
+    min-width:960px; */
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+#text{
+    margin-left: 3px;
+    margin-right: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#iconspan{
+    margin-right: 5px;
+}
+
+.alertify-notifier .ajs-message, .ajs-success{
+    /* color: #000000 !important; */
+    font-family: 'Roboto', sans-serif !important;
+    border: none !important;
+    text-shadow: none !important;
+    height: auto!important;
+    width: 23vh !important;
+}
+/* End Notify System */
+
+/* Start Dashcam */
+#Dashcam_Body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Dashcam_Gametime {
+    position: absolute;
+    left: 10px;
+    top: 310px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Dashcam_Clocktime {
+    position: absolute;
+    left: 10px;
+    top: 360px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Dashcam_DateTime {
+    position: absolute;
+    left: 10px;
+    top: 410px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Dashcam_Unitnumber {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Dashcam_Unitname {
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Dashcam_Unitspeed {
+    position: absolute;
+    right: 10px;
+    top: 130px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Dashcam_Image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: calc(100% - 250px);
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+
+#Dashcam_Info {
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 180px);
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+#warningscontainer {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw * 0.70) !important;
+    height: calc(100vh * 0.70) !important;
+    background: rgba(0, 0, 0, 0.6);
+    position:   fixed;
+    display: none;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+#warningHeader {
+  height: 70px;
+  background: rgba(18,82,228,0.8);
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: calc(100vh * 0.40) !important;
+    overflow-y: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.table{
+    color: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#myProgress {
+    margin-top: 25px ;
+    width: 100%;
+    background-color: grey;
+    border-color: grey;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 30px; /* To center it vertically */
+  color: white;
+  max-width: 100%;
+}
+
+#points{
+    color: #4CAF50;
+    margin-top: 50px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.container {
+    min-width: 992px !important;
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+thead {
+display: table-header-group;
+}
+tr{
+page-break-inside: avoid;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 0px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+/* CCTV */
+#Camera_Container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 20px;
+    background-color: transparent !important;
+}
+
+#Camera_Label {
+    position: relative;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+#Camera_Label2 {
+    position: relative;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+a {
+  display: block;
+  text-decoration: none; 
+}
+
+#cursorPointer {
+  position: absolute;
+  z-index: 999999;
+  display: none; 
+}
+
+.crosshair {
+  text-align: center;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #FFFFFF;
+  border-radius: 100%;
+  position: absolute;
+  top: calc(50% - 4px);
+  left: calc(50% - 4px);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 200; 
+}
+
+.crosshair.fadeIn {
+  width: 8px;
+  height: 8px;
+  top: calc(50% - 4px);
+  left: calc(50% - 4px);
+  z-index: 200; 
+}
+
+.crosshair.active {
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  background: #FFFFFF url("assets/close.png") no-repeat 4px 4px;
+  background-size: 45%; 
+}
+
+.fadeIn {
+  opacity: 1;
+  z-index: 10; 
+}
+
+
+
+
+@font-face {
+  font-family: "ChaletComprime";
+  src: url("./progress/fonts/ChaletComprimeCologneSixty.ttf");
+}
+
+@font-face {
+  font-family: "RobotoMono-Regular";
+  src: url("./progress/fonts/RobotoMono-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100&display=swap');
+
+.progress-container{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 30px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ui-dial {
+  position: absolute;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.ui-dial svg {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.ui-dial svg circle {
+  fill: transparent;
+}
+
+.ui-dial svg circle:nth-child(2) {
+  /* z-index: 11; */
+}
+
+.ui-dial svg circle:last-child {
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.ui-dial.done, .linear-progress.done {
+  -webkit-animation: done 200ms ease 0ms forwards;
+  animation: done 200ms ease 0ms forwards;
+}
+
+.ui-dial .ui-indicator {
+  position: absolute;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  /* left: 20%; */
+}
+
+.ui-dial .ui-label {
+  position: absolute;
+  color: #fff;
+  min-width: 300px;
+  text-align: center;
+}
+
+.ui-dial.label-bottom .ui-label {
+  top: 100%;
+  margin: 20px 0;
+}
+.ui-dial.label-right .ui-label {
+  left: 100%;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.ui-dial.label-left .ui-label {
+  right: 100%;
+  margin: 0 20px;
+  text-align: right;
+}
+
+.ui-dial.label-top .ui-label {
+  bottom: 100%;
+  margin: 20px 0;
+}
+
+.linear-progress {
+  position: absolute;
+  isolation: isolate;
+}
+
+.linear-progress-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.linear-progress-fg {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: 0 50% 0;
+}
+
+.linear-progress-label {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: difference;
+  font-size: 90%;
+}
+
+@-webkit-keyframes done {
+  from {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+
+  to {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+  }
+}
+
+@keyframes done {
+  from {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+
+  to {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+  }
+}
+
+.enhanced-display {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.enhanced-bone {
+fill: none;
+stroke: yellow;
+stroke-width: 3;
+}
+
+.enhanced-player {
+fill: none;
+stroke: red;
+stroke-width: 0.5;
+}

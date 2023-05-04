@@ -1,0 +1,191 @@
+-- local minCops = 5
+-- local rewardjew = math.random(1,3)
+
+-- RegisterServerEvent('bankofenglandrobbery:giveover')
+-- AddEventHandler('bankofenglandrobbery:giveover', function(bool)
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if bool == true then
+--         AQUA.giveMoney({user_id, math.random(100000,350000)})
+--         AQUA.giveInventoryItem({user_id,"jewellery",rewardjew,true})
+--         end
+--     else
+--         print(userid.. "is cheating")
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:checkdrill1')
+-- AddEventHandler('bankofenglandrobbery:checkdrill1', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_drill",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:boxuse1', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Drill"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:checkdrill2')
+-- AddEventHandler('bankofenglandrobbery:checkdrill2', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_drill",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:boxuse2', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Drill"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:checkdrill3')
+-- AddEventHandler('bankofenglandrobbery:checkdrill3', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_drill",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:boxuse3', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Drill"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:checkdrill4')
+-- AddEventHandler('bankofenglandrobbery:checkdrill4', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_drill",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:boxuse4', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Drill"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:checkdrill5')
+-- AddEventHandler('bankofenglandrobbery:checkdrill5', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_drill",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:boxuse5', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Drill"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:checkdrill6')
+-- AddEventHandler('bankofenglandrobbery:checkdrill6', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_drill",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:boxuse6', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Drill"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:phone1')
+-- AddEventHandler('bankofenglandrobbery:phone1', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     local cops = AQUA.getUsersByPermission({"police.armoury"})
+--     if AQUA.hasPermission({user_id,"police.armoury"}) then
+--         AQUAclient.notify(player,{"~d~Cops can't rob banks."})
+--     else
+--         if #cops >= minCops then
+--             if AQUA.tryGetInventoryItem({user_id,"bank_phone",1,false}) then
+--                 TriggerClientEvent('bankofenglandrobbery:phoneclient1', source)
+--             else
+--                 AQUAclient.notify(player,{"~d~You don't have a hacking phone."})
+--             end
+--         else
+--             AQUAclient.notify(player,{"~d~Not enough cops online."})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:phone2')
+-- AddEventHandler('bankofenglandrobbery:phone2', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.tryGetInventoryItem({user_id,"bank_phone",1,false}) then
+--             TriggerClientEvent('bankofenglandrobbery:phoneclient2', source)
+--         else
+--             AQUAclient.notify(player,{"You don't have ~d~1 Hacking Phone"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:policecheckpermdoor')
+-- AddEventHandler('bankofenglandrobbery:policecheckpermdoor', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.hasPermission({user_id,"bank.doorbutton"}) then
+--             TriggerClientEvent('bankofenglandrobbery:policecheckpermdoorSUCC', source)
+--         else
+--             AQUAclient.notify(player,{"~d~You are not a policeman or a banker!"})
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:policetimeddoortimed')
+-- AddEventHandler('bankofenglandrobbery:policetimeddoortimed', function()
+--     local user_id = AQUA.getUserId({source})
+--     local player = AQUA.getUserSource({user_id})
+--     if(user_id)then
+--         if AQUA.hasPermission({user_id,"bank.doorbuttontimed"}) then
+--             TriggerClientEvent('bankofenglandrobbery:policetimeddoorSUCC', source)
+--         else
+--             AQUAclient.notify(player,{"~d~You are not a policeman or a banker!"})
+--         end
+--     end
+-- end)
+
+-- local players = GetPlayers()
+
+-- RegisterServerEvent('bankofenglandrobbery:callpolicerobberrydoor')
+-- AddEventHandler('bankofenglandrobbery:callpolicerobberrydoor', function()
+--     for i,v in pairs(players) do
+--         local user_id = AQUA.getUserId({v})
+--         if user_id ~= nil then
+--           if AQUA.hasPermission({user_id, "police.armoury"}) then
+--             TriggerClientEvent("AQUA:setBankRobberyBlip", v)
+--           end
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:callpolicerobberryvault')
+-- AddEventHandler('bankofenglandrobbery:callpolicerobberryvault', function()
+--     for i,v in pairs(players) do
+--         local user_id = AQUA.getUserId({v})
+--         if user_id ~= nil then
+--           if AQUA.hasPermission({user_id, "police.armoury"}) then
+--             TriggerClientEvent("AQUA:setBankRobberyBlip", v)
+--           end
+--         end
+--     end
+-- end)
+
+-- RegisterServerEvent('bankofenglandrobbery:callpolicebutton')
+-- AddEventHandler('bankofenglandrobbery:callpolicebutton', function()
+--     for i,v in pairs(players) do
+--         local user_id = AQUA.getUserId({v})
+--         if user_id ~= nil then
+--           if AQUA.hasPermission({user_id, "police.armoury"}) then
+--             TriggerClientEvent("AQUA:setBankRobberyBlip", v)
+--           end
+--         end
+--     end
+-- end)

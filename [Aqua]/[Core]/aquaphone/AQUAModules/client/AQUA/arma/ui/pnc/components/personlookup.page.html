@@ -1,0 +1,66 @@
+<div v-if="$parent.page == 'personsearch'">
+    <div style="position: fixed; top: 20%;">
+        <div class="personNav">
+            <p class="inlinep yellow">|</p>
+            <p class="inlinep navp" v-on:click="$parent.switchPage('personsearch')">Home </p>
+            <p class="inlinep yellow">|</p>
+            <p class="inlinep navp" v-on:click="$parent.switchPage('new-fines')">New Fine </p>
+            <p class="inlinep yellow">|</p>
+            <p class="inlinep navp" v-on:click="$parent.switchPage('dvsa')">DVSA</p>
+        </div>
+        <h3 class="inlineh3">Person Lookup</h3><br>
+        <input v-model="$parent.personFirstName" type="text" class="firstname"placeholder="Enter First Name" required style="margin-bottom: 5px;;" ><br>
+        <input v-model="$parent.personLastName" type="text" class="lastname"placeholder="Enter Last Name" required ><br>
+        <button id="searchP" v-on:click="$parent.searchPerson()">Search</button>
+        <p class="modes">{{$parent.searchPersonPageMessage}}</p>
+    </div>
+    <ul class="personResults">
+        <button class="searchPersonsBtn"v-for="person in $parent.searchedPersons"  style="margin-bottom: 5px;;"v-bind:class="{ resultActive: person.isActive}"v-on:click="$parent.selectPerson(person)">{{person.fName}} {{person.lName}} Age: {{person.age}}</button>
+    </ul>
+    <div class="searchInfo">
+        <p class="modes" style="margin-bottom: 20px;">National Insurance Number: {{$parent.selectedPerson.id}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Firstname: {{$parent.selectedPerson.firstname}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Lastname: {{$parent.selectedPerson.lastname}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Age: {{$parent.selectedPerson.age}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Phone: {{$parent.selectedPerson.phone}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Points: {{$parent.selectedPerson.points}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Licence: {{$parent.selectedPerson.licence}}</p>
+        <p class="modes" style="margin-bottom: 20px;">Owned Vehicles: {{$parent.selectedPerson.vehicles.length}}</p>
+        <select v-if="!$parent.selectedPerson.id == ''" name="" id="" size="9" class="playerVehicles" style="margin-right: 5px;">
+            <option v-for="home in $parent.selectedPerson.homes">{{home}}</option>
+        </select>
+    </div>
+        <select v-if="!$parent.selectedPerson.id == ''" v-model="$parent.selectedWarningMarkerType" style="top: 30%; width:30%;" name="" id="" class="personHouses option">
+            <option value="FI">FI – FIREARMS (May possess firearms)</option>
+            <option value="WE">WE – WEAPONS (May possess weapons)</option>
+            <option value="XP">XP - EXPLOSIVES (May possess explosives)</option>
+            <option value="VI">VI - VIOLENT (May resort to violent behaviour)</option>
+            <option value="CO">CO - CONTAGIOUS (May be a hazard to others as carrier of disease e.g. HIV)</option>
+            <option value="ES">ES - ESCAPER (May attempt to escape from custody)</option>
+            <option value="AG">AG - ALLEGES (May make false allegations against Police)</option>
+            <option value="AT">AT - AILMENT (May suffer from medical condition or require medication)</option>
+            <option value="SU">SU - SUICIDAL (May attempt suicide)</option>
+            <option value="MN">MN - MENTAL (Is suffering from a mental disorder)</option>
+            <option value="DR">DR - DRUGS (May be in unlawful possession of a controlled drug)</option>
+            <option value="IM">IM - M/IMPERS (May impersonate a male)</option>
+            <option value="IF">IF - F/IMPERS (May impersonate a female)</option>
+        </select>
+        <input v-if="!$parent.selectedPerson.id == ''" v-model="$parent.warningMarkerReason" type="text" class="warning-marker-reason personHouses"placeholder="Enter Reason" required style="top: 35%; margin-bottom: 5px; width: 29.5%;" ><br>
+        <button v-if="!$parent.selectedPerson.id == ''" class=" personHouses specialbutton" style="top: 40%; width: 30%;" @click="$parent.addMarker">Add Marker</button>
+        
+        <table v-if="!$parent.selectedPerson.id == ''" style="width:30%; overflow: none !important;" class="personHouses">
+            <tr>
+              <th>Warning Marker</th>
+              <th>Reason</th>
+              <!-- <th>Click to remove</th> -->
+            </tr>
+            <tbody>
+                <tr v-for="marker in $parent.selectedPerson.warning_markers">
+                    <td class="text-center">{{marker.type}}</td>
+                    <td class="text-center">{{marker.reason}}</td>
+                    <!-- <td class="text-center">X</td> -->
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

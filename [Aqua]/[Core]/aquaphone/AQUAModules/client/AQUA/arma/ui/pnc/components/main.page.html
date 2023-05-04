@@ -1,0 +1,39 @@
+<div v-if='$parent.page == "main"'>
+    <div id="ad">
+        <h1>Attention Drawn:</h1>
+        <select v-model="$parent.selectedADType"class="attention-draw-type" style="width: 30%; margin-bottom: 2%;">
+            <option value="veh">Vehicle</option>
+            <option value="person">Person</option>
+        </select><br/>
+        <input v-if="$parent.selectedADType=='veh'" v-model="$parent.AD.vehicle.model" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Vehicle Model" required ><br v-if="$parent.selectedADType=='veh'">
+        <input v-if="$parent.selectedADType=='veh'" v-model="$parent.AD.vehicle.colour" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Vehicle Colour" required ><br v-if="$parent.selectedADType=='veh'">
+        <input v-if="$parent.selectedADType=='veh'" v-model="$parent.AD.vehicle.plate" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Vehicle Plate" required ><br v-if="$parent.selectedADType=='veh'">
+        <input v-if="$parent.selectedADType=='veh'" v-model="$parent.AD.reason" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Reason" required ><br v-if="$parent.selectedADType=='veh'">
+
+        <input v-if="$parent.selectedADType=='person'" v-model="$parent.AD.person.sex" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Sex" required ><br v-if="$parent.selectedADType=='person'">
+        <input v-if="$parent.selectedADType=='person'" v-model="$parent.AD.person.name" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Name" required ><br v-if="$parent.selectedADType=='person'">
+        <input v-if="$parent.selectedADType=='person'" v-model="$parent.AD.person.general_desc" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="General Description" required ><br v-if="$parent.selectedADType=='person'">
+        <input v-if="$parent.selectedADType=='person'" v-model="$parent.AD.person.hair_colour" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Hair Colour" required ><br v-if="$parent.selectedADType=='person'">
+        <input v-if="$parent.selectedADType=='person'" v-model="$parent.AD.reason" type="text" class="specialinput" style="width: 29.5%; margin-bottom: 1%;" placeholder="Reason" required ><br v-if="$parent.selectedADType=='person'">
+        <button class=" specialbutton" @click="addAttentionDrawn" style="width: 30%;">Add attention drawn.</button>
+    </div>
+    <div class="ad-table">
+        <table class="attention-drawn">
+            <tr>
+                <th>Type</th>
+                <th>Info</th>
+                <!-- <th>Click to remove</th> -->
+            </tr>
+              <tbody>
+                  <tr className="ad-row" v-for="(ad, index) in $parent.attention_drawn">
+                        <td @click="$parent.selectAD(ad, index)" v-bind:class="{active : ($parent.selectedAd.index == index) }" class="ad-row text-center">{{ad.type}}</td>
+                        <td @click="$parent.selectAD(ad, index)"  v-bind:class="{active : ($parent.selectedAd.index == index) }" class="ad-row text-center">{{ad.data}}</td>
+                      <!-- <td class="text-center">X</td> -->
+                  </tr>
+              </tbody>
+        </table>
+        <div>
+            <button v-if="$parent.shouldDisplayDeleteButton" class=" specialbutton" @click="$parent.removeAD" style="width: 50%; margin-top: 2%;">{{$parent.removeADText}}</button>
+        </div>
+    </div>
+</div>
